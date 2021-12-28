@@ -1,0 +1,10 @@
+PARA HACER LOS CAMBIOS
+
+git add *
+git commit -m "COMENTARIO"
+git push
+
+en vez de COMENTARIO, pon una descripcion de el guardado, yo suelo poner "saving"
+
+PARA ACTUALIZAR ==== ANTES DE HACER UN CAMBIO, ACTUALIZA O SINO ESTARÁS HACIENDO CAMBIOS EN UNA VERSION ANTERIOR
+git pull
