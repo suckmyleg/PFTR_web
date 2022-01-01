@@ -1,0 +1,19 @@
+.player_container{
+	background-color: black;
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+}
+.player_name{
+	font-size: 15px;
+	color: white;
+}
+
+.player_title_container{
+	text-align: center;
+}
+
+.imag{
+	height: 100%;
+	width: 100%;
+}

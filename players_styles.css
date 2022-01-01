@@ -1,0 +1,15 @@
+.titulo{
+	height: 50px;
+	background-color: turquoise; 
+	text-align: center; 
+	font-size: 40px;
+	border: 2px solid black;
+}
+
+
+body{
+	margin: 0px;
+}
+h1{
+	margin: 0px;
+}
