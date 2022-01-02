@@ -1,3 +1,5 @@
+@font-face { font-family: Minecraft; src: url('Fonts/minecraft.ttf'); }
+
 .titulo{
 	height: 50px;
 	background-color: black;
@@ -5,7 +7,7 @@
 	font-size: 40px;
 	border: 2px solid black;
 	color:white;
-	font-family:
+	font-family:Minecraft;
 }
 
 
