@@ -1,15 +1,18 @@
 .player_container{
-	background-color: none;
-	border: 2px solid black;
+	background-color: rgb(50, 50, 52);
+	border: 2px solid orange;
 	display: inline-block;
 	width: 150px;
 	margin-right: 20px;
 	margin-bottom:10px;
 	transition:width 0.5s;
+	padding:5px;
 }
 
 .player_name{
-	font-size: 40px;
+	font-size: 30px;
+	font-family:Minecraft;
+	color: white
 }
 
 .player_title_container{
@@ -26,7 +29,7 @@
 }
 
 .player_container:hover{
-    background-color:rgb(1, 213, 151);
+    background-color:orange;
     color:white;
     width: 200px;
 }

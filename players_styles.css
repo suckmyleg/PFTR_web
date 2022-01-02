@@ -10,7 +10,12 @@
 	font-family:Minecraft;
 }
 
-
+#icono{
+    width:25px;
+}
+#car{
+    width:40px;
+}
 body{
 	margin: 0px;
 }
@@ -18,9 +23,13 @@ h1{
 	margin: 0px;
 }
 
+
+hr{
+margin:0px;}
+
 #screen{
     padding:35px;
-    background-color: gray;
+    background-color: rgb(182, 182, 170);
     width: 100%;
-    height:850px;
+    height:100%;
 }
