@@ -1,0 +1,10 @@
+@font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
+
+body{
+font-family: 'Minecraft';
+}
+
+
+.cerdo{
+    width:100px
+}
