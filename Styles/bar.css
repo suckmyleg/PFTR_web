@@ -1,0 +1,23 @@
+@font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
+
+.bar_icons{
+    width:25px;
+}
+
+#icon1{
+    width:25px;
+}
+
+#icon2{
+    width:40px;
+}
+
+#bar_name{
+	height: 50px;
+	background-color: black;
+	text-align: center;
+	font-size: 40px;
+	border: 2px solid black;
+	color:white;
+	font-family:Minecraft;
+}
