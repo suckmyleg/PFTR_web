@@ -1,7 +1,7 @@
 @font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
 
 .bar_icons{
-    width:25px;
+
 }
 
 #icon1{
@@ -9,7 +9,7 @@
 }
 
 #icon2{
-    width:40px;
+    width:30px;
 }
 
 #bar_name{
