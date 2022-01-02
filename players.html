@@ -7,15 +7,21 @@
 	<script type="text/javascript" src="players_writer.js"></script>
 
 </head>
-<body onload="write({'name':'patricia', 'healt':20})">
+<body onload="">
 	<div class="titulo">
 		macaco
 
 	</div>
-	<div id="screen" style="background-color: lightpink;width: 100%; height:500px;">
+	<div id="screen">
 
-		
 
+
+		<script>
+			for (var i = 0; i <20; i++)
+			{
+				write({'name':'patricia', 'healt':20-i, 'id':'30b38646-38bc-4f08-9724-46f14d088118'});
+			}
+		</script>
 	</div>
 </body>
 </html>

@@ -1,19 +1,31 @@
 .player_container{
-	background-color: black;
+	background-color: none;
+	border: 2px solid black;
 	display: inline-block;
-	height: 150px;
 	width: 150px;
+	margin-right: 20px;
+	margin-bottom:10px;
+	transition:width 0.5s;
 }
 .player_name{
-	font-size: 15px;
-	color: white;
+	font-size: 40px;
 }
 
 .player_title_container{
 	text-align: center;
 }
 
-.imag{
-	height: 100%;
-	width: 100%;
+.player_skin{
+	width: 50;
+	height:300px;
+}
+
+.hearts{
+    height:15px;
+}
+
+.player_container:hover{
+    background-color:orange;
+    color:red;
+    width: 200px;
 }

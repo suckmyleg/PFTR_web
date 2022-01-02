@@ -13,3 +13,10 @@ body{
 h1{
 	margin: 0px;
 }
+
+#screen{
+    padding:35px;
+    background-color: lightpink;
+    width: 100%;
+    height:850px;
+}
