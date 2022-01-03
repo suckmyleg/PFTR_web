@@ -204,7 +204,7 @@ die("error" . $e);}
 $output = "error";
 if($command == "create_password")
 {
-	$output = create_password($name);
+	$output = create_password($name, $server_key);
 }
 
 if($command == "host_new_match")
