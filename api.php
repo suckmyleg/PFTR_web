@@ -200,6 +200,7 @@ try{
 }
 catch (Exception  $e){
 die("error" . $e);}
+$output = "error";
 if($command == "create_password")
 {
 	$output = create_password($name);
