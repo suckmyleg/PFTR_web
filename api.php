@@ -191,8 +191,8 @@ try{
 
     $permission = verifyserver_keyFromServer($name, $server_key);
 }
-catch{
-die("error");}
+catch (Exception  $e){
+die("error" + $e);}
 if($command == "create_password")
 {
 	$output = create_password($name);
