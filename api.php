@@ -21,30 +21,30 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-function verifyKeyFromServer($name, $key)
+function verifyserver_keyFromServer($name, $server_key)
 {
-    $key_ =getKeyFromServer($name);
-    if ($key){return FALSE;}
-	return $key_ == $key;
+    $server_key_ =getserver_keyFromServer($name);
+    if ($server_key){return FALSE;}
+	return $server_key_ == $server_key;
 }
 
-function getKeyFromServer($name)
+function getserver_keyFromServer($name)
 {
-       $sql = "SELECT key FROM servers WHERE name='" + $name + "'";
+       $sql = "SELECT server_key FROM servers WHERE name='" + $name + "'";
        $result = $conn->query($sql);
 
        if ($result->num_rows > 0) {
          // output data of each row
          while($row = $result->fetch_assoc()) {
-           if($key == ""){return FALSE;}
-           return $key;
+           if($server_key == ""){return FALSE;}
+           return $server_key;
          }
        } else {
          return FALSE ;
        }
 }
 
-function save_to_database($name, $key, $match_id, $content)
+function save_to_database($name, $server_key, $match_id, $content)
 {
 	if ($permission)
 	{
@@ -61,7 +61,7 @@ function save_to_database($name, $key, $match_id, $content)
 	}
 }
 
-function host_new_match($name, $key, $players, $max_players)
+function host_new_match($name, $server_key, $players, $max_players)
 {
     if ($permission)
     	{
@@ -83,7 +83,7 @@ function host_new_match($name, $key, $players, $max_players)
     	}
 }
 
-function get_players_from_match($name, $key, $match_id)
+function get_players_from_match($name, $server_key, $match_id)
 {
         if ($permission)
         {
@@ -116,7 +116,7 @@ function add_player_to_match($name, $match_id, $player)
 {
     if ($permission)
     	{
-            $sql = "UPDATE matches SET players='"+get_players_from_match($name, $key, $match_id)+$content+"' WHERE server_name='" + $name + "'";
+            $sql = "UPDATE matches SET players='"+get_players_from_match($name, $server_key, $match_id)+$content+"' WHERE server_name='" + $name + "'";
             if ($conn->query($sql) === TRUE) {
                 return "OK";
             } else {
@@ -132,7 +132,7 @@ function add_player_to_match($name, $match_id, $player)
 function create_new_server()
 {
     $name = generateRandomString(20);
-    $sql = "INSERT INTO servers (server_name, key)
+    $sql = "INSERT INTO servers (server_name, server_key)
                    VALUES ('"+$name+"', '')";
 
     if ($conn->query($sql) === TRUE)
@@ -146,30 +146,30 @@ function create_new_server()
     return $name;
 }
 
-function create_password($name, $key)
+function create_password($name, $server_key)
 {
-    $new_key = generateRandomString(20);
+    $new_server_key = generateRandomString(20);
     if ($permission)
     {
-        $sql = "UPDATE servers SET key='"+$new_key+"' WHERE server_name='" + $name + "'";
+        $sql = "UPDATE servers SET server_key='"+$new_server_key+"' WHERE server_name='" + $name + "'";
         if ($conn->query($sql) === TRUE) {
             return "OK";
         } else {
         die("Error updating: " . $conn->error);
         }
-        return $new_key;
+        return $new_server_key;
     }
     else
     {
-        if(!getKeyFromServer($name)
+        if(!getserver_keyFromServer($name))
         {
-            $sql = "UPDATE servers SET key='"+$new_key+"' WHERE server_name='" + $name + "'";
+            $sql = "UPDATE servers SET server_key='"+$new_server_key+"' WHERE server_name='" + $name + "'";
                     if ($conn->query($sql) === TRUE) {
                         return "OK";
                     } else {
                     die("Error updating: " . $conn->error);
                     }
-            return $new_key;
+            return $new_server_key;
         }
         else
         {
@@ -180,13 +180,13 @@ function create_password($name, $key)
 
 $name = $_GET["server"];
 
-$key = $_GET["key"];
+$server_key = $_GET["server_key"];
 
 $command = $_GET["command"];
 
 $data = $_GET["data"];
 
-$permission = verifyKeyFromServer($name, $key);
+$permission = verifyserver_keyFromServer($name, $server_key);
 
 if($command == "create_password")
 {
@@ -195,12 +195,12 @@ if($command == "create_password")
 
 if($command == "host_new_match")
 {
-	$output = host_new_match($name, $key, $players, $max_players);
+	$output = host_new_match($name, $server_key, $players, $max_players);
 }
 
 if($command == "reload")
 {
-	$output = save_to_database($name, $key, $match_id, $data);
+	$output = save_to_database($name, $server_key, $match_id, $data);
 }
 
 if($command == "create_new_server")

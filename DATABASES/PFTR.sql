@@ -11,6 +11,6 @@ CREATE TABLE `matches` (
 CREATE TABLE `servers` (
   `id` INT(6) PRIMARY KEY AUTO_INCREMENT,
   `server_name` VARCHAR(20),
-  `key` VARCHAR(20),
+  `server_key` VARCHAR(20),
   `added` TIMESTAMP DEFAULT (CURRENT_TIMESTAMP)
 );
