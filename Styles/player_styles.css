@@ -1,11 +1,12 @@
 .player_container{
-	background-color: rgb(50, 50, 52);
+	background-color: rgb(255, 165, 34, 0.0);
 	border: 2px solid orange;
+	border-radius:10px;
 	display: inline-block;
 	width: 150px;
 	margin-right: 20px;
 	margin-bottom:10px;
-	transition:width 0.5s;
+	transition:width 0.5s, background-color 0.3s;
 	padding:5px;
 }
 
