@@ -17,7 +17,7 @@ function verifyKeyFromServer($name, $key)
 
 function getKeyFromServer($name)
 {
-	
+	return "";
 }
 
 function save_to_database($name, $key, $content)
@@ -38,9 +38,13 @@ function host_new_match()
 
 }
 
+function get_new_server_name()
+{
+    return generateRandomString(20);
+}
+
 function host_new_server($name)
 {
-
 	return generateRandomString(20);
 }
 
@@ -56,13 +60,20 @@ if($command == "host_new_server")
 {
 	$output = host_new_server($name);
 }
+
 if($command == "host_new_match")
 {
 	$output = "";
 }
+
 if($command == "reload")
 {
 	$output = save_to_database($name, $key, $data);
+}
+
+if($command == "get_new_server_name")
+{
+	$output = get_new_server_name();
 }
 
 ?>
