@@ -27,7 +27,7 @@ function generateRandomString($length = 10) {
 function verifyserver_keyFromServer($name, $server_key)
 {
     $server_key_ = getserver_keyFromServer($name);
-    if ($server_key){return FALSE;}
+    if (!$server_key){return FALSE;}
 	return $server_key_ == $server_key;
 }
 
@@ -40,7 +40,7 @@ function getserver_keyFromServer($name)
        if ($result->num_rows > 0) {
          // output data of each row
          while($row = $result->fetch_assoc()) {
-         $server_key = $row["server_key"];
+            $server_key = $row["server_key"];
            if($server_key == ""){return FALSE;}
            return $server_key;
          }
@@ -201,6 +201,8 @@ try{
     $command = $_GET["command"];
 
     $data = $_GET["data"];
+
+    $match_id = $_GET["match_id"];
 
     $permission = verifyserver_keyFromServer($name, $server_key);
 }
