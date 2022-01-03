@@ -23,7 +23,7 @@ function generateRandomString($length = 10) {
 
 function verifyserver_keyFromServer($name, $server_key)
 {
-    $server_key_ =getserver_keyFromServer($name);
+    $server_key_ = getserver_keyFromServer($name);
     if ($server_key){return FALSE;}
 	return $server_key_ == $server_key;
 }
@@ -177,17 +177,19 @@ function create_password($name, $server_key)
         }
     }
 }
+try{
+    $name = $_GET["server"];
 
-$name = $_GET["server"];
+    $server_key = $_GET["server_key"];
 
-$server_key = $_GET["server_key"];
+    $command = $_GET["command"];
 
-$command = $_GET["command"];
+    $data = $_GET["data"];
 
-$data = $_GET["data"];
-
-$permission = verifyserver_keyFromServer($name, $server_key);
-
+    $permission = verifyserver_keyFromServer($name, $server_key);
+}
+catch{
+die("error");}
 if($command == "create_password")
 {
 	$output = create_password($name);
