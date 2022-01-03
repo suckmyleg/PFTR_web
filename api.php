@@ -92,6 +92,36 @@ function host_new_match($name, $server_key, $players, $max_players)
     	}
 }
 
+function get_match_players_data($name, $server_key, $match_id)
+{
+    global $conn;
+    global $permission;
+        if ($permission)
+        {
+            $sql = "SELECT data FROM matches WHERE id='" . $match_id . "'";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0)
+            {
+                while($row = $result->fetch_assoc())
+                {
+                    return $row["data"];
+                }
+            }
+            else
+            {
+                die("Error match doesnt exist");
+            }
+
+        }
+        else
+        {
+        	die("Permission denied");
+        }
+
+}
+
+
 function get_players_from_match($name, $server_key, $match_id)
 {
     global $conn;
@@ -169,7 +199,7 @@ function create_password($name, $server_key)
     {
         $sql = "UPDATE servers SET server_key='".$new_server_key."' WHERE server_name='" . $name . "'";
         if ($conn->query($sql) === TRUE) {
-            return "OK";
+            return $new_server_key;
         } else {
         die("Error updating: " . $conn->error);
         }
@@ -181,7 +211,7 @@ function create_password($name, $server_key)
         {
             $sql = "UPDATE servers SET server_key='".$new_server_key."' WHERE server_name='" . $name . "'";
                     if ($conn->query($sql) === TRUE) {
-                        return "OK";
+                        return $new_server_key;
                     } else {
                     die("Error updating: " . $conn->error);
                     }
