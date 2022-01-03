@@ -146,7 +146,7 @@ function create_new_server()
 
     if ($conn->query($sql) === TRUE)
     {
-        return "OK";
+        return $name;
     }
     else
     {
