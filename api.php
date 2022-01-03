@@ -19,7 +19,7 @@ function generateRandomString($length = 10) {
     $charactersLength = strlen($characters);
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
+        $randomString += $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
 }
@@ -33,7 +33,7 @@ function verifyserver_keyFromServer($name, $server_key)
 
 function getserver_keyFromServer($name)
 {
-       $sql = "SELECT server_key FROM servers WHERE name='" + $name + "'";
+       $sql = "SELECT server_key FROM servers WHERE server_name='" . $name . "'";
        $result = $conn->query($sql);
 
        if ($result->num_rows > 0) {
@@ -51,7 +51,7 @@ function save_to_database($name, $server_key, $match_id, $content)
 {
 	if ($permission)
 	{
-        $sql = "UPDATE matches SET players_data='"+$content+"' WHERE id='" + $match_id + "'";
+        $sql = "UPDATE matches SET players_data='".$content."' WHERE id='" . $match_id . "'";
         if ($conn->query($sql) === TRUE) {
             return "OK";
         } else {
@@ -69,7 +69,7 @@ function host_new_match($name, $server_key, $players, $max_players)
     if ($permission)
     	{
             $sql = "INSERT INTO matches (server_name, winner, players, max_players, players_data)
-                   VALUES ('"+$name+"', '', '"+$players+"', '"+$max_players+"', '[]')";
+                   VALUES ('".$name."', '', '".$players."', '".$max_players."', '[]')";
 
             if ($conn->query($sql) === TRUE)
             {
@@ -90,7 +90,7 @@ function get_players_from_match($name, $server_key, $match_id)
 {
         if ($permission)
         {
-            $sql = "SELECT players FROM matches WHERE id='" + $match_id + "'";
+            $sql = "SELECT players FROM matches WHERE id='" . $match_id . "'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0)
@@ -98,7 +98,7 @@ function get_players_from_match($name, $server_key, $match_id)
                 while($row = $result->fetch_assoc())
                 {
                     $d = $row["players"];
-                    if (!$d == "") {$d = $d + ";";}
+                    if (!$d == "") {$d = $d . ";";}
                     return $d;
                 }
             }
@@ -119,7 +119,7 @@ function add_player_to_match($name, $match_id, $player)
 {
     if ($permission)
     	{
-            $sql = "UPDATE matches SET players='"+get_players_from_match($name, $server_key, $match_id)+$content+"' WHERE server_name='" + $name + "'";
+            $sql = "UPDATE matches SET players='".get_players_from_match($name, $server_key, $match_id).$content."' WHERE server_name='" . $name . "'";
             if ($conn->query($sql) === TRUE) {
                 return "OK";
             } else {
@@ -136,7 +136,7 @@ function create_new_server()
 {
     $name = generateRandomString(20);
     $sql = "INSERT INTO servers (server_name, server_key)
-                   VALUES ('"+$name+"', '')";
+                   VALUES ('".$name."', '')";
 
     if ($conn->query($sql) === TRUE)
     {
@@ -154,7 +154,7 @@ function create_password($name, $server_key)
     $new_server_key = generateRandomString(20);
     if ($permission)
     {
-        $sql = "UPDATE servers SET server_key='"+$new_server_key+"' WHERE server_name='" + $name + "'";
+        $sql = "UPDATE servers SET server_key='".$new_server_key."' WHERE server_name='" . $name . "'";
         if ($conn->query($sql) === TRUE) {
             return "OK";
         } else {
@@ -166,7 +166,7 @@ function create_password($name, $server_key)
     {
         if(!getserver_keyFromServer($name))
         {
-            $sql = "UPDATE servers SET server_key='"+$new_server_key+"' WHERE server_name='" + $name + "'";
+            $sql = "UPDATE servers SET server_key='".$new_server_key."' WHERE server_name='" . $name . "'";
                     if ($conn->query($sql) === TRUE) {
                         return "OK";
                     } else {
@@ -192,7 +192,7 @@ try{
     $permission = verifyserver_keyFromServer($name, $server_key);
 }
 catch (Exception  $e){
-die("error" + $e);}
+die("error" . $e);}
 if($command == "create_password")
 {
 	$output = create_password($name);
