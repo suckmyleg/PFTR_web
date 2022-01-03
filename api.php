@@ -40,6 +40,7 @@ function getserver_keyFromServer($name)
        if ($result->num_rows > 0) {
          // output data of each row
          while($row = $result->fetch_assoc()) {
+         $server_key = $row["server_key"];
            if($server_key == ""){return FALSE;}
            return $server_key;
          }
