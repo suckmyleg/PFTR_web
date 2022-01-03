@@ -52,6 +52,7 @@ function getserver_keyFromServer($name)
 function save_to_database($name, $server_key, $match_id, $content)
 {
     global $conn;
+    global $permission;
 	if ($permission)
 	{
         $sql = "UPDATE matches SET players_data='".$content."' WHERE id='" . $match_id . "'";
@@ -70,6 +71,7 @@ function save_to_database($name, $server_key, $match_id, $content)
 function host_new_match($name, $server_key, $players, $max_players)
 {
     global $conn;
+    global $permission;
     if ($permission)
     	{
             $sql = "INSERT INTO matches (server_name, winner, players, max_players, players_data)
@@ -93,6 +95,7 @@ function host_new_match($name, $server_key, $players, $max_players)
 function get_players_from_match($name, $server_key, $match_id)
 {
     global $conn;
+    global $permission;
         if ($permission)
         {
             $sql = "SELECT players FROM matches WHERE id='" . $match_id . "'";
@@ -123,6 +126,7 @@ function get_players_from_match($name, $server_key, $match_id)
 function add_player_to_match($name, $match_id, $player)
 {
     global $conn;
+    global $permission;
     if ($permission)
     	{
             $sql = "UPDATE matches SET players='".get_players_from_match($name, $server_key, $match_id).$content."' WHERE server_name='" . $name . "'";
@@ -159,6 +163,7 @@ function create_new_server()
 function create_password($name, $server_key)
 {
     global $conn;
+    global $permission;
     $new_server_key = generateRandomString(20);
     if ($permission)
     {
