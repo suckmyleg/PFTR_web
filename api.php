@@ -76,4 +76,6 @@ if($command == "get_new_server_name")
 	$output = get_new_server_name();
 }
 
+echo $output;
+
 ?>
