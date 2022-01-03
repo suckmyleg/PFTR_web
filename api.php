@@ -33,6 +33,7 @@ function verifyserver_keyFromServer($name, $server_key)
 
 function getserver_keyFromServer($name)
 {
+    global $conn;
        $sql = "SELECT server_key FROM servers WHERE server_name='" . $name . "'";
        $result = $conn->query($sql);
 
@@ -49,6 +50,7 @@ function getserver_keyFromServer($name)
 
 function save_to_database($name, $server_key, $match_id, $content)
 {
+    global $conn;
 	if ($permission)
 	{
         $sql = "UPDATE matches SET players_data='".$content."' WHERE id='" . $match_id . "'";
@@ -66,6 +68,7 @@ function save_to_database($name, $server_key, $match_id, $content)
 
 function host_new_match($name, $server_key, $players, $max_players)
 {
+    global $conn;
     if ($permission)
     	{
             $sql = "INSERT INTO matches (server_name, winner, players, max_players, players_data)
@@ -73,7 +76,7 @@ function host_new_match($name, $server_key, $players, $max_players)
 
             if ($conn->query($sql) === TRUE)
             {
-                return "OK";
+                return $last_id = $conn->insert_id;
             }
             else
             {
@@ -88,6 +91,7 @@ function host_new_match($name, $server_key, $players, $max_players)
 
 function get_players_from_match($name, $server_key, $match_id)
 {
+    global $conn;
         if ($permission)
         {
             $sql = "SELECT players FROM matches WHERE id='" . $match_id . "'";
@@ -117,6 +121,7 @@ function get_players_from_match($name, $server_key, $match_id)
 
 function add_player_to_match($name, $match_id, $player)
 {
+    global $conn;
     if ($permission)
     	{
             $sql = "UPDATE matches SET players='".get_players_from_match($name, $server_key, $match_id).$content."' WHERE server_name='" . $name . "'";
@@ -134,6 +139,7 @@ function add_player_to_match($name, $match_id, $player)
 
 function create_new_server()
 {
+    global $conn;
     $name = generateRandomString(20);
     $sql = "INSERT INTO servers (server_name, server_key)
                    VALUES ('".$name."', '')";
@@ -151,6 +157,7 @@ function create_new_server()
 
 function create_password($name, $server_key)
 {
+    global $conn;
     $new_server_key = generateRandomString(20);
     if ($permission)
     {
