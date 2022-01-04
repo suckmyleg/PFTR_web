@@ -22,7 +22,7 @@
 
         if ($name && $match_id)
         {
-	        echo '<iframe scrolling="no" src="Screens/players.php?server='.$server.'&q='.$q.'"></iframe>';
+	        echo '<iframe scrolling="no" src="Screens/players.php?server='.$name.'&q='.$match_id.'"></iframe>';
         }
         else
         {
