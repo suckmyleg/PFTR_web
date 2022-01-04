@@ -13,6 +13,9 @@
 		<img class="bar_icons" id="icon2" src="Images/Icono/aju.png">
 	</div>
 	<hr>
-	<iframe scrolling="no" src="Screens/servers.php"></iframe>
+	<?php
+
+	    echo '<iframe scrolling="no" src="Screens/servers.php"></iframe>';
+	?>
 </body>
 </html>
