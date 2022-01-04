@@ -122,13 +122,15 @@ function get_servers_data()
     $sql = "SELECT server_name FROM servers";
     $result = $conn->query($sql);
 
+    $results = array();
+
     if (!empty($result) && $result->num_rows > 0)
     {
-       $result -> fetch_all(MYSQLI_ASSOC);
-
-       $result -> free_result();
-
-       return $result;
+        while($row = $result->fetch_assoc())
+        {
+            array_push($results, $row)
+        }
+       return $results;
     }
     else
     {
