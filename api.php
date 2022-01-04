@@ -30,7 +30,7 @@ if($command == "create_password")
 
 if($command == "host_new_match")
 {
-	$output = host_new_match($name, $server_key, $players, $max_players);
+	$output = host_new_match($name, $server_key, "", $data);
 }
 
 if($command == "reload")
