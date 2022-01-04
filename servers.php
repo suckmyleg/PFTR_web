@@ -13,7 +13,7 @@
 	</div>
 	<hr class="bar_stick">
 	<?php
-	    echo '<iframe id="servers_frame" scrolling="no" src="Screens/servers.php"></iframe>';
+	    echo '<div id="servers_frame_container"><iframe id="servers_frame" scrolling="no" src="Screens/servers.php"></iframe></div>';
 	?>
 </body>
 </html>

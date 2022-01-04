@@ -20,11 +20,11 @@
 
         if ($match_id)
         {
-	        echo '<iframe id="players_frame" scrolling="no" src="Screens/players.php?m='.$match_id.'"></iframe>';
+	        echo '<div id="players_frame_container"><iframe id="players_frame" scrolling="no" src="Screens/players.php?m='.$match_id.'"></iframe></div>';
         }
         else
         {
-            echo '<iframe id="players_frame" scrolling="no" src="Screens/players.php"></iframe>';
+            echo '<div id="players_frame_container"><iframe id="players_frame" scrolling="no" src="Screens/players.php"></iframe></div>';
         }
 
 	?>

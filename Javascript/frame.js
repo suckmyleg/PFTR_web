@@ -12,10 +12,24 @@ function go_search_bar(search_bar_id, url, frame_id)
     go(frame_id, url + search_bar.innerHTML);
 }
 
+
+function finish_reloading_frame(frame_id, container)
+{
+    frame.src = frame.src;
+}
+
 function reload_frame(frame_id)
 {
+    //var container = document.getElementById(frame_id + "_container");
     var frame = document.getElementById(frame_id);
+
+    //frame.id = "REMOVE";
+
+    //container.innerHTML += ""
+
     frame.src = frame.src;
+
+    //document.querySelector("iframe").addEventListener( "load", finish_reloading_frame(frame_id, container));
 }
 
 
