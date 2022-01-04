@@ -11,7 +11,7 @@ catch (Exception  $e) {$name = FALSE;}
 try {$command = $_GET["command"];}
 catch (Exception  $e) {$command = FALSE;}
 
-try {$data = $_GET["data"];}
+try {$data = base64_decode($_GET["data"]);}
 catch (Exception  $e) {$data = FALSE;}
 
 try {$server_key = $_GET["server_key"];}
