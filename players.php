@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="Styles/players_styles.css">
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
 	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
 	<script type="text/javascript" src="Javascript/frame.js"></script>
