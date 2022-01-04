@@ -94,7 +94,7 @@ function host_new_match($name, $server_key, $players, $max_players)
     	}
 }
 
-function get_match_players_data($name, $match_id)
+function get_match_players_data($match_id)
 {
     global $conn;
 

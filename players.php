@@ -14,15 +14,13 @@
 	</div>
 	<hr>
 	<?php
-	    try {$name = $_GET["server"];}
-        catch (Exception  $e) {$name = FALSE;}
 
-        try {$match_id = $_GET["q"];}
+        try {$match_id = $_GET["m"];}
         catch (Exception  $e) {$match_id = FALSE;}
 
-        if ($name && $match_id)
+        if ($match_id)
         {
-	        echo '<iframe scrolling="no" src="Screens/players.php?server='.$name.'&q='.$match_id.'"></iframe>';
+	        echo '<iframe scrolling="no" src="Screens/players.php?m='.$match_id.'"></iframe>';
         }
         else
         {
