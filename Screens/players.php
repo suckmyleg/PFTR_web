@@ -14,7 +14,7 @@
 			{
 				write(<?php
 
-
+                use "../tools.php";
 
 				?>, "../");
 			}
