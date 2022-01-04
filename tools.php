@@ -128,7 +128,7 @@ function get_servers_data()
     {
         while($row = $result->fetch_assoc())
         {
-            array_push($results, $row)
+            array_push($results, $row);
         }
        return $results;
     }
