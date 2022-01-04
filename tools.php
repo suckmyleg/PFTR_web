@@ -81,7 +81,7 @@ function host_new_match($name, $server_key, $players, $max_players)
 
             if ($conn->query($sql) === TRUE)
             {
-                return $last_id = $conn->insert_id;
+                return $conn->insert_id;
             }
             else
             {
