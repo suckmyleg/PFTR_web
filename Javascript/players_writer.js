@@ -25,9 +25,9 @@ function get_players_html(players, working_directory)
     return result;
 }
 
-function write_players(players, working_directory)
+function write_players(players)
 {
     var screen = document.getElementById("screen");
 
-    screen.innerHTML = screen.innerHTML + get_players_html(players, working_directory);
+    screen.innerHTML = screen.innerHTML + get_players_html(players, "../");
 }

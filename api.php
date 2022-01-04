@@ -42,6 +42,10 @@ if($command == "create_new_server")
 {
 	$output = create_new_server();
 }
+if($command == "match_players_data")
+{
+    $output = get_match_players_data($match_id);
+}
 
 $conn->close();
 
