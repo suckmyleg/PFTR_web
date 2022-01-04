@@ -99,9 +99,10 @@ function get_match_players_data($name, $match_id)
     global $conn;
 
     $sql = "SELECT data FROM matches WHERE id='" . $match_id . "'";
+
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0)
+    if (isset($result) && $result->num_rows > 0)
     {
         while($row = $result->fetch_assoc())
         {
