@@ -24,7 +24,7 @@ function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function auto_reload_frame(frame_id, delay)
+async function auto_reload_frame(frame_id, delay)
 {
     while (true)
     {

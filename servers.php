@@ -11,7 +11,7 @@
 		PFTR
 		<img class="bar_icons" id="icon2" src="Images/Icono/aju.png">
 	</div>
-	<hr>
+	<hr class="bar_stick">
 	<?php
 	    echo '<iframe id="servers_frame" scrolling="no" src="Screens/servers.php"></iframe>';
 	?>

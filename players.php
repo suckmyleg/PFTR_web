@@ -12,7 +12,7 @@
 		PFTR
 		<img class="bar_icons" id="icon2" src="Images/Icono/aju.png">
 	</div>
-	<hr>
+	<hr class="bar_stick">
 	<?php
 
         try {$match_id = $_GET["m"];}
