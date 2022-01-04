@@ -29,7 +29,7 @@ function write_players(players)
 {
     var screen = document.getElementById("screen");
 
-    screen.innerHTML = screen.innerHTML + get_players_html(players, "../");
+    screen.innerHTML = get_players_html(players, "../");
 }
 
 //https://www.tutorialspoint.com/javascript-sleep-function
@@ -41,6 +41,7 @@ async function auto_reload(match_id, delay)
 {
     while (true)
     {
+
         reload(match_id, write_players);
         await sleep(delay*1000);
     }
