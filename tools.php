@@ -98,7 +98,7 @@ function get_match_players_data($name, $match_id)
 {
     global $conn;
 
-    $sql = "SELECT data FROM matches WHERE id=" . $match_id . "";
+    $sql = "SELECT players_data FROM matches WHERE id=" . $match_id . "";
 
     $result = $conn->query($sql);
 
