@@ -118,6 +118,7 @@ function get_match_players_data($name, $match_id)
 
 function get_servers_data()
 {
+    global $conn;
     $sql = "SELECT server_name FROM servers";
     $result = $conn->query($sql);
 
