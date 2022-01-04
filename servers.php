@@ -15,7 +15,7 @@
 	<hr>
 	<?php
 
-	    echo '<iframe scrolling="no" src="Screens/servers.php"></iframe>';
+	    echo '<iframe id="servers_frame" scrolling="no" src="Screens/servers.php"></iframe>';
 	?>
 </body>
 </html>

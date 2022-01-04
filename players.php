@@ -5,8 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="Styles/players_styles.css">
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
 	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
+	<script type="text/javascript" src="../Javascript/frame.js"></script>
 </head>
-<body>
+<body onload="auto_reload_frame('players_frame', 5);">
 	<div id="bar_name">
 		<img class="bar_icons" id="icon1" src="Images/Icono/pollo.png">
 		PFTR
@@ -20,11 +21,11 @@
 
         if ($match_id)
         {
-	        echo '<iframe scrolling="no" src="Screens/players.php?m='.$match_id.'"></iframe>';
+	        echo '<iframe id="players_frame" scrolling="no" src="Screens/players.php?m='.$match_id.'"></iframe>';
         }
         else
         {
-            echo '<iframe scrolling="no" src="Screens/players.php"></iframe>';
+            echo '<iframe id="players_frame" scrolling="no" src="Screens/players.php"></iframe>';
         }
 
 	?>
