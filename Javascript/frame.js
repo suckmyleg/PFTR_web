@@ -19,12 +19,12 @@ function reload_frame(frame_id)
 }
 
 
-# https://www.tutorialspoint.com/javascript-sleep-function
+//https://www.tutorialspoint.com/javascript-sleep-function
 function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function auto_reload_frame(frame_id, delay)
+function auto_reload_frame(frame_id, delay)
 {
     while (true)
     {

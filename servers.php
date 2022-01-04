@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="Styles/players_styles.css">
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
 	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
 </head>
@@ -14,7 +13,6 @@
 	</div>
 	<hr>
 	<?php
-
 	    echo '<iframe id="servers_frame" scrolling="no" src="Screens/servers.php"></iframe>';
 	?>
 </body>
