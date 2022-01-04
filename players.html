@@ -3,26 +3,16 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="Styles/players_styles.css">
-	<link rel="stylesheet" type="text/css" href="Styles/player_styles.css">
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
-	<script type="text/javascript" src="players_writer.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
 </head>
-<body onload="">
+<body onload="includeHTML();">
 	<div id="bar_name">
 		<img class="bar_icons" id="icon1" src="Images/Icono/pollo.png">
 		PFTR
 		<img class="bar_icons" id="icon2" src="Images/Icono/aju.png">
-
 	</div>
 	<hr>
-	<div id="screen">
-		<script>
-			for (var i = 0; i <20; i++)
-			{
-				write({'name':'patricia', 'healt':20-i, 'id':'30b38646-38bc-4f08-9724-46f14d088118'});
-			}
-		</script>
-	</div>
+	<iframe scrolling="no" src="players_screen.html"></iframe>
 </body>
 </html>

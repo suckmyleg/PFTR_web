@@ -1,4 +1,3 @@
-@font-face { font-family: Minecraft; src: url('Fonts/minecraft.ttf'); }
 
 body{
 	margin: 0px;
@@ -11,9 +10,3 @@ h1{
 hr{
 margin:0px;}
 
-#screen{
-    padding:35px;
-    background-color: rgb(64, 224, 208);
-    width: 100%;
-    height:100%;
-}

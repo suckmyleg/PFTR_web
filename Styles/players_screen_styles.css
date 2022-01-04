@@ -1,0 +1,10 @@
+@font-face { font-family: Minecraft; src: url('Fonts/minecraft.ttf'); }
+
+body{
+    background-color: rgb(64, 224, 208);
+}
+
+#screen{
+    padding:35px;
+    width:100%;
+}
