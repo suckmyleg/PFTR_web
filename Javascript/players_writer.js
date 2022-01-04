@@ -37,7 +37,7 @@ function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function auto_reload(match_id)
+async function auto_reload(match_id, delay)
 {
     while (true)
     {
