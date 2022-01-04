@@ -15,7 +15,7 @@ function get_players_html(players, working_directory)
 {
     var result = "";
 
-    for(var i; i<players.length; i++)
+    for(var i = 0; i < players.length; i++)
     {
         result += get_player_html(players[i], working_directory);
     }

@@ -8,14 +8,14 @@ function write(server, working_directory){
 
 function get_server_html(server, working_directory)
 {
-    return server.name;
+    return server.server_name;
 }
 
 function get_servers_html(servers, working_directory)
 {
     var result = "";
 
-    for(var i; i<servers.length; i++)
+    for(var i = 0; i < servers.length; i++)
     {
         result += get_server_html(servers[i], working_directory);
     }
