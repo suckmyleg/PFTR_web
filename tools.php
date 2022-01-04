@@ -94,32 +94,24 @@ function host_new_match($name, $server_key, $players, $max_players)
     	}
 }
 
-function get_match_players_data($name, $server_key, $match_id)
+function get_match_players_data($name, $match_id)
 {
     global $conn;
-    global $permission;
-        if ($permission)
-        {
-            $sql = "SELECT data FROM matches WHERE id='" . $match_id . "'";
-            $result = $conn->query($sql);
 
-            if ($result->num_rows > 0)
-            {
-                while($row = $result->fetch_assoc())
-                {
-                    return $row["data"];
-                }
-            }
-            else
-            {
-                die("Error match doesnt exist");
-            }
+    $sql = "SELECT data FROM matches WHERE id='" . $match_id . "'";
+    $result = $conn->query($sql);
 
-        }
-        else
+    if ($result->num_rows > 0)
+    {
+        while($row = $result->fetch_assoc())
         {
-        	die("Permission denied");
+            return $row["data"];
         }
+    }
+    else
+    {
+        die("Error match doesnt exist");
+    }
 
 }
 

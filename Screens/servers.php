@@ -10,8 +10,23 @@
 <body>
 	<div id="screen">
 		<script>
-			
-		</script>
+            for (var i = 0; i <20; i++)
+            {
+                write(<?php
+
+                include "../tools.php";
+
+                try {$name = $_GET["server"];}
+                catch (Exception  $e) {$name = FALSE;}
+
+                try {$match_id = $_GET["q"];}
+                catch (Exception  $e) {$match_id = FALSE;}
+
+                echo get_match_players_data($name, $match_id);
+
+                ?>, "../");
+            }
+        </script>
 	</div>
 </body>
 </html>

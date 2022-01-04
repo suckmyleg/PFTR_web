@@ -1,29 +1,26 @@
 <?php
 
-use "tools.php";
+include "tools.php";
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-try
-{
-    $name = $_GET["server"];
+try {$name = $_GET["server"];}
+catch (Exception  $e) {$name = FALSE;}
 
-    $server_key = $_GET["server_key"];
+try {$command = $_GET["command"];}
+catch (Exception  $e) {$command = FALSE;}
 
-    $command = $_GET["command"];
+try {$data = $_GET["data"];}
+catch (Exception  $e) {$data = FALSE;}
 
-    $data = $_GET["data"];
+try {$server_key = $_GET["server_key"];}
+catch (Exception  $e) {$server_key = FALSE;}
 
-    $match_id = $_GET["match_id"];
+try {$match_id = $_GET["match_id"];}
+catch (Exception  $e) {$match_id = FALSE;}
 
-    $permission = verifyserver_keyFromServer($name, $server_key);
-}
-catch (Exception  $e)
-{
-    die("error" . $e);
-}
-
+$permission = verifyserver_keyFromServer($name, $server_key);
 
 $output = "error";
 if($command == "create_password")
