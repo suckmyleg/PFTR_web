@@ -126,6 +126,8 @@ function get_servers_data()
     {
        $result -> fetch_all(MYSQLI_ASSOC);
 
+       $result -> free_result();
+
        return $result;
     }
     else
