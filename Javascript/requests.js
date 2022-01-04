@@ -5,7 +5,7 @@ function reload(match_id, on_load)
     //create XMLHttpRequest object
     const xhr = new XMLHttpRequest()
     //open a get request with the remote server URL
-    xhr.open("GET", "http:/pftr.ddns.net:8080/PFTR_web/api.php?command=match_players_data&match_id=" + match_id)
+    xhr.open("GET", "../api.php?command=match_players_data&match_id=" + match_id)
     //send the Http request
     xhr.send()
 
