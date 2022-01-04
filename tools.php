@@ -116,6 +116,22 @@ function get_match_players_data($name, $match_id)
 
 }
 
+function get_servers_data()
+{
+    $sql = "SELECT server_name FROM servers";
+    $result = $conn->query($sql);
+
+    if (!empty($result) && $result->num_rows > 0)
+    {
+       $result -> fetch_all(MYSQLI_ASSOC);
+
+       return $result;
+    }
+    else
+    {
+        die("Error listing servers");
+    }
+}
 
 function get_players_from_match($name, $server_key, $match_id)
 {
