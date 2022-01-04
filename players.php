@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
 	<script type="text/javascript" src="Javascript/frame.js"></script>
 </head>
-<body onload="auto_reload_frame('players_frame', 5);">
+<body onload="auto_reload_frame('players_frame', 30);">
 	<div id="bar_name">
 		<img class="bar_icons" id="icon1" src="Images/Icono/pollo.png">
 		PFTR
