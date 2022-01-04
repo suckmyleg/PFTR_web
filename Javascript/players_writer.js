@@ -17,7 +17,10 @@ function get_players_html(players, working_directory)
 
     for(var i = 0; i < players.length; i++)
     {
-        result += get_player_html(players[i], working_directory);
+        if(players[i].id != "null")
+        {
+            result += get_player_html(players[i], working_directory);
+        }
     }
     return result;
 }

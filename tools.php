@@ -57,7 +57,7 @@ function save_to_database($name, $server_key, $match_id, $content)
     global $permission;
 	if ($permission)
 	{
-        $sql = "UPDATE matches SET players_data=`".$content."` WHERE id='" . $match_id . "'";
+        $sql = "UPDATE matches SET players_data='".base64_encode($content)."' WHERE id='" . $match_id . "'";
         if ($conn->query($sql) === TRUE) {
             return "OK";
         } else {
@@ -106,7 +106,7 @@ function get_match_players_data($match_id)
     {
         while($row = $result->fetch_assoc())
         {
-            return $row["players_data"];
+            return base64_decode($row["players_data"]);
         }
     }
     else
