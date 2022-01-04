@@ -12,7 +12,7 @@
 		<script>
 			for (var i = 0; i <20; i++)
 			{
-				write(<?php
+				write_players(<?php
 
                 include "../tools.php";
 

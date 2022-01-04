@@ -106,7 +106,7 @@ function get_match_players_data($name, $match_id)
     {
         while($row = $result->fetch_assoc())
         {
-            return $row["data"];
+            return $row["players_data"];
         }
     }
     else
