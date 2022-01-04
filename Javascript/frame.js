@@ -28,7 +28,7 @@ async function auto_reload_frame(frame_id, delay)
 {
     while (true)
     {
-        reload_frame(frame_id);
         await sleep(delay*1000);
+        reload_frame(frame_id);
     }
 }
