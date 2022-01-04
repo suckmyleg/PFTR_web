@@ -31,3 +31,17 @@ function write_players(players)
 
     screen.innerHTML = screen.innerHTML + get_players_html(players, "../");
 }
+
+//https://www.tutorialspoint.com/javascript-sleep-function
+function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function auto_reload(match_id)
+{
+    while (true)
+    {
+        reload(match_id, write_players);
+        await sleep(delay*1000);
+    }
+}

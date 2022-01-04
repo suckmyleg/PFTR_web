@@ -11,13 +11,9 @@
 <body>
 	<div id="screen">
 		<script>
-            while(true)
-            {
-                reload(<?php
-                echo $_GET["m"];
-                ?>, write_players);
-            }
-
+            auto_reload(<?php
+            echo $_GET["m"];
+            ?>);
 		</script>
 	</div>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1055279756736871"
