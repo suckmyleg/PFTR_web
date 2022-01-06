@@ -30,7 +30,7 @@ if($command == "create_password")
 
 if($command == "host_new_match")
 {
-	$output = host_new_match($name, $server_key, "", base64_encode($data));
+	$output = host_new_match($name, $server_key, "", base64_decode($data));
 }
 
 if($command == "reload")
