@@ -1,3 +1,5 @@
+@font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
+
 .player_container{
 	background-color: rgb(255, 165, 34, 0.0);
 	border: 2px solid orange;
@@ -6,7 +8,7 @@
 	width: 150px;
 	margin-right: 20px;
 	margin-bottom:20px;
-	transition:width 0.5s, background-color 0.3s;
+	transition:width 0.0s, background-color 0.3s;
 	padding:5px;
 }
 
@@ -14,15 +16,10 @@
 	display: inline-block;
 }
 
-.player_estadistics{
-    height:100%;
-	display: inline-block;
-}
-
 .player_name{
 	font-size: 30px;
 	font-family:Minecraft;
-	color: white
+	color: white;
 }
 
 .player_title_container{
@@ -41,6 +38,17 @@
 .player_container:hover{
     background-color:orange;
     color:white;
-    width: 200px;
+    width: 300px;
+    margin-right:0px;
+    padding-right:0px;
 }
 
+.player_estadistics{
+    color:white;
+    display:none;
+}
+
+.player_container:hover .player_estadistics {
+    display:inline-block;
+    color:black;
+}
