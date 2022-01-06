@@ -13,4 +13,4 @@ Pagina web para ver la partida en directo
 #
 - Other
 - - [Main](https://github.com/suckmyleg/PFTR_web/blob/main/index.html) - Main page [Unfinished]
-- - [Servers](https://github.com/suckmyleg/PFTR_web/blob/main/servers.php) - All servers [Finished]
+- - [Servers](https://github.com/suckmyleg/PFTR_web/blob/main/servers.php) - All servers [Unfinished]
