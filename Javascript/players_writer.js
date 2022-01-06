@@ -5,6 +5,8 @@ function get_player_html(player, working_directory)
 
 function write_players(players)
 {
+    var working_directory = "../";
+
     var screen = document.getElementById("screen");
 
     var new_players = "";
@@ -18,11 +20,11 @@ function write_players(players)
         {
             if(player_div == null)
             {
-                new_players += get_player_html(player, "../");
+                new_players += get_player_html(player, working_directory);
             }
             else
             {
-                player_div.getElementsByClassName("hearts").src = +working_directory+"Images/Hearts/"+parseInt(player.health);
+                player_div.getElementsByClassName("hearts").src = working_directory + "Images/Hearts/"+parseInt(player.health);
             }
         }
     }
