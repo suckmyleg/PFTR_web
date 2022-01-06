@@ -1,7 +1,7 @@
 function getStatus(player)
 {
     if(player.lives == 0) return "Dead";
-    if(player.status) return "Online";
+    if(player.status == "true") return "Online";
     return "Offline"
 }
 
