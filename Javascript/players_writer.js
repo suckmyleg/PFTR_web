@@ -21,7 +21,7 @@ function write_players(players)
         }
         else
         {
-            player_div.getElementByClass("hearts").src = +working_directory+"Images/Hearts/"+parseInt(player.health);
+            player_div.getElementsByClassName("hearts").src = +working_directory+"Images/Hearts/"+parseInt(player.health);
         }
     }
 
