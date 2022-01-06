@@ -14,14 +14,16 @@ function write_players(players)
         var player = players[i];
 
         var player_div = document.getElementById(player.id);
-
-        if(player.id != "null" && player_div == null)
+        if (player.id != "null")
         {
-            new_players += get_player_html(player, "../");
-        }
-        else
-        {
-            player_div.getElementsByClassName("hearts").src = +working_directory+"Images/Hearts/"+parseInt(player.health);
+            if(player_div == null)
+            {
+                new_players += get_player_html(player, "../");
+            }
+            else
+            {
+                player_div.getElementsByClassName("hearts").src = +working_directory+"Images/Hearts/"+parseInt(player.health);
+            }
         }
     }
 
