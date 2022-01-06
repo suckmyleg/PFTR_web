@@ -35,7 +35,7 @@ function get_player_html(player, working_directory)
             	'<div class="player_estadistics">'+
             		'<p>Kills: <a id="'+player.id+'_kills">'+player.number_kills+'</a></p>'+
             		'<p>Exp: <a id="'+player.id+'_exp">'+player.exp_level+'</a></p>'+
-            		'<p>Time: <a id="'+player.id+'_playing">'+player.time_playing/100+'</a>s</p>'+
+            		'<p>Time: <a id="'+player.id+'_playing">'+parseInt(.time_playing/100)+'</a>s</p>'+
             		'<p>Hp: <a id="'+player.id+'_hp">'+parseInt(player.health*100)/100+'</a></p>'+
             		'<div style="height:200px;display:inline-block;"></div>'+
             	'</div>'+
@@ -73,7 +73,7 @@ function write_players(players)
 
                 if (player_kills.innerHTML != player.number_kills) player_kills.innerHTML = player.number_kills;
                 if (player_exp.innerHTML != player.exp_level) player_exp.innerHTML = player.exp_level;
-                if (player_playing.innerHTML != player.time_playing/100) player_playing.innerHTML = player.time_playing/100;
+                if (player_playing.innerHTML != player.time_playing/100) player_playing.innerHTML = parseInt(player.time_playing/100);
                 if (player_status.innerHTML != status)
                 {
                     player_status.innerHTML = status;

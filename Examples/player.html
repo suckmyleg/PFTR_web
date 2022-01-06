@@ -6,28 +6,33 @@
 </head>
 <body style="background-color:black;">
 
-<div class="player_container">
-	<div class="player_display">
-		<div class="player_title_container">
-			<a class="player_name">
-				player
-			</a>
+<div id="id" style="display:inline-block;">
+	<div class="player_container">
+		<div class="player_display">
+			<div class="player_name_container">
+				<a class="player_name">
+					name
+					</a>
+				</div>
+			<div class="player_status_container">
+				<a id="id_status" style="color:getStatusColor(player);">
+					getStatus(player)
+					</a>
+				</div>
+			<div>
+				<img class="player_skin" src="https://crafatar.com/renders/body/id">
+				</div>
+			<img class="hearts" id="id_hearts" src="working_directoryImages/Hearts/parseInt(health).png">
+			</div>
+		<div class="player_estadistics">
+			<p>Kills: <a id="id_kills">number_kills</a></p>
+			<p>Exp: <a id="id_exp">exp_level</a></p>
+			<p>Time: <a id="id_playing">parseInt(.time_playing/100)</a>s</p>
+			<p>Hp: <a id="id_hp">parseInt(health*100)/100</a></p>
+			<div style="height:200px;display:inline-block;"></div>
+			</div>
 		</div>
-		<div>
-			<img class="player_skin" src="https://crafatar.com/renders/body/30b38646-38bc-4f08-9724-46f14d088118">
-		</div>
-		<img class="hearts" src="../Images/Hearts/20.png">
 	</div>
-
-	<div class="player_estadistics">
-		<p>Kills: <a id="kills">0</a></p>
-		<p>Exp_level: <a id="exp">0</a></p>
-		<p>Playing: <a id="playing">0</a></p>
-		<p>Hp: <a id="hp">0</a></p>
-		<div style="height:200px;display:inline-block;"></div>
-	</div>
-
-</div>
 
 
 
