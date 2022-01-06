@@ -1,7 +1,7 @@
 @font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
 
 .player_container{
-	background-color: rgb(255, 165, 34, 0.0);
+	background-color: black;
 	border: 2px solid orange;
 	border-radius:10px;
 	display: inline-block;

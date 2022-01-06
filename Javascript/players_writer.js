@@ -17,7 +17,7 @@ function get_player_html(player, working_directory)
             		'<p>Kills: <a id="'+player.id+'_kills">'+player.number_kills+'</a></p>'+
             		'<p>Exp_level: <a id="'+player.id+'_exp">'+player.exp_level+'</a></p>'+
             		'<p>Playing: <a id="'+player.id+'_playing">'+player.time_playing+'</a></p>'+
-            		'<p>Hp: <a id="'+player.id+'_hp">'+player.health+'</a></p>'+
+            		'<p>Hp: <a id="'+player.id+'_hp">'+parseInt(player.health*100)/100+'</a></p>'+
             		'<div style="height:200px;display:inline-block;"></div>'+
             	'</div>'+
             '</div>'+
