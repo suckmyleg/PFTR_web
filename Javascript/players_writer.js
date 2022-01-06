@@ -1,6 +1,6 @@
 function get_player_html(player, working_directory)
 {
-    return '<div id="'+player.id+'" class="player_container"><div class="player_title_container"><a class="player_name">'+player.name+'</a></div><div><img class="player_skin" src="https://crafatar.com/renders/body/'+player.id+'"></div><img class="hearts" src="'+working_directory+'Images/Hearts/'+parseInt(player.health)+'.png"></div>';
+    return '<div id="'+player.id+'" class="player_container"><div class="player_title_container"><a class="player_name">'+player.name+'</a></div><div><img class="player_skin" src="https://crafatar.com/renders/body/'+player.id+'"></div><img class="hearts" id="h" src="'+working_directory+'Images/Hearts/'+parseInt(player.health)+'.png"></div>';
 }
 
 function write_players(players)
@@ -23,7 +23,7 @@ function write_players(players)
             else
             {
                 let hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
-                player_div.getElementsByClassName("hearts").src = hearts_src;
+                player_div.getElementById("h").src = hearts_src;
             }
         }
     }
