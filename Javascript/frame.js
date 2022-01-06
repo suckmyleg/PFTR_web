@@ -66,7 +66,7 @@ function create_search_bar(nav_id="nav", search_bar_id, button_id, frame_url, fr
     button_bar.onclick = function (){
     console.log(nav_id);
     var url = document.getElementById(search_bar_id).value;
-    go(frame_id, frame_url + "?m=" + url);
+    go(frame_id, frame_url + url);
     };
 }
 
