@@ -30,7 +30,7 @@ function write_players(players)
         }
     }
 
-    screen.innerHTML += new_players;
+    if (new_players != "") screen.innerHTML += new_players;
 }
 
 //https://www.tutorialspoint.com/javascript-sleep-function
