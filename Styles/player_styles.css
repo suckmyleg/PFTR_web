@@ -46,6 +46,7 @@
 .player_estadistics{
     color:white;
     display:none;
+    font-family:Minecraft;
 }
 
 .player_container:hover .player_estadistics {
