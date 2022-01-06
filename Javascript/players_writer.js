@@ -7,8 +7,6 @@ function write_players(players)
 {
     var working_directory = "../";
 
-    var screen = document.getElementById("screen");
-
     var new_players = "";
 
     for(var i = 0; i < players.length; i++)
@@ -30,7 +28,7 @@ function write_players(players)
         }
     }
 
-    if (new_players != "") screen.innerHTML += new_players;
+    if (new_players != "") document.getElementById("screen").innerHTML += new_players;
 }
 
 //https://www.tutorialspoint.com/javascript-sleep-function
