@@ -1,7 +1,6 @@
 function get_player_html(player, working_directory)
 {
-    return '<div id="'+player.id+'" style="display:inline-block;">'+
-        '<div class="player_container">'+
+    return '<div class="player_container">'+
             	'<div class="player_display">'+
             		'<div class="player_title_container">'+
             			'<a class="player_name">'+
@@ -20,8 +19,7 @@ function get_player_html(player, working_directory)
             		'<p>Hp: <a id="'+player.id+'_hp">'+parseInt(player.health*100)/100+'</a></p>'+
             		'<div style="height:200px;display:inline-block;"></div>'+
             	'</div>'+
-            '</div>'+
-        '</div>';
+            '</div>';
 }
 
 function write_players(players)
