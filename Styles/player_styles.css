@@ -3,7 +3,7 @@
 .player_container{
 	background-color: black;
 	border: 2px solid orange;
-	border-radius:10px;
+	border-radius:20px;
 	display: inline-block;
 	width: 150px;
 	margin-right: 20px;
@@ -41,6 +41,7 @@
     width: 300px;
     margin-right:0px;
     padding-right:0px;
+    border-radius:0px;
 }
 
 .player_estadistics{
