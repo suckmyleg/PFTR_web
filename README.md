@@ -5,7 +5,7 @@ Pagina web para ver la partida en directo
 - Search_bar
 - - [Players](https://github.com/suckmyleg/PFTR_web/blob/main/players.html) - List of players on a match [Finished]
 - - [Server](https://github.com/suckmyleg/PFTR_web/blob/main/server.html) - Server info [Unfinished]
-- - [Server](https://github.com/suckmyleg/PFTR_web/blob/main/info.html) - Server and players info [Unfinished]
+- - [Info](https://github.com/suckmyleg/PFTR_web/blob/main/info.html) - Server and players info [Unfinished]
 #
 - Url
 - - [Server](https://github.com/suckmyleg/PFTR_web/blob/main/server.php) - Server info [Unfinished]
