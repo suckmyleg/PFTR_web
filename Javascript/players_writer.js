@@ -1,13 +1,25 @@
+function getStatus(player)
+{
+    if(player.lives == 0) return "Dead";
+    if(player.status) return "Online";
+    return "Offline"
+}
+
 function get_player_html(player, working_directory)
 {
     return '<div id="'+player.id+'" style="display:inline-block;">'+
         '<div class="player_container">'+
             	'<div class="player_display">'+
-            		'<div class="player_title_container">'+
-            			'<a class="player_name">'+
+            		'<div class="player_status_container">'+
+            			'<a id="'+player.id+'_status">'+
             				player.name+
             			'</a>'+
             		'</div>'+
+            		'<div class="player_status_container">'+
+                        '<a class="player_status">'+
+                            getStatus(player)+
+                        '</a>'+
+                    '</div>'+
             		'<div>'+
             			'<img class="player_skin" src="https://crafatar.com/renders/body/'+player.id+'">'+
             		'</div>'+
@@ -44,25 +56,29 @@ function write_players(players)
             else
             {
                 let hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health)+".png";
+                let status = getStatus(player);
                 let hearts_image = document.getElementById(player.id+"_hearts");
                 let player_kills = document.getElementById(player.id+"_kills");
                 let player_exp = document.getElementById(player.id+"_exp");
                 let player_playing = document.getElementById(player.id+"_playing");
                 let player_hp = document.getElementById(player.id+"_hp");
+                let player_status = document.getElementById(player.id+"_status");
 
-                if (player_kills.innerHTML != player.number_kills) {player_kills.innerHTML = player.number_kills;}
-                if (player_exp.innerHTML != player.exp_level) {player_exp.innerHTML = player.exp_level;}
-                if (player_playing.innerHTML != player.time_playing/100) {player_playing.innerHTML = player.time_playing/100;}
+                if (player_kills.innerHTML != player.number_kills) player_kills.innerHTML = player.number_kills;
+                if (player_exp.innerHTML != player.exp_level) player_exp.innerHTML = player.exp_level;
+                if (player_playing.innerHTML != player.time_playing/100) player_playing.innerHTML = player.time_playing/100;
+                if (player_status.innerHTML != status) player_status.innerHTML = status;
                 if (player_hp.innerHTML != parseInt(player.health*100)/100)
                 {
                     player_hp.innerHTML = parseInt(player.health*100)/100;
                     hearts_image.src = hearts_src;
                 }
+                .filter = "grayscale(100%)";
             }
         }
     }
 
-    if (new_players != "") {document.getElementById("screen").innerHTML += new_players;}
+    if (new_players != "") document.getElementById("screen").innerHTML += new_players;
 }
 
 function show_stadistics(player_id="")
