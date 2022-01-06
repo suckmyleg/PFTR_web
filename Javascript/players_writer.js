@@ -23,12 +23,12 @@ function write_players(players)
             else
             {
                 var hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
-                if (hearts_src != player_div.getElementsByClassName("hearts").src) player_div.getElementsByClassName("hearts").src = hearts_src;
+                if (hearts_src != player_div.getElementsByClassName("hearts").src) {player_div.getElementsByClassName("hearts").src = hearts_src;}
             }
         }
     }
 
-    if (new_players != "") document.getElementById("screen").innerHTML += new_players;
+    if (new_players != "") {document.getElementById("screen").innerHTML += new_players;}
 }
 
 //https://www.tutorialspoint.com/javascript-sleep-function
