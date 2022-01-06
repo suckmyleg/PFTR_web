@@ -22,7 +22,7 @@ function write_players(players)
             }
             else
             {
-                let hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
+                let hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health)+".png";
                 document.getElementById("h"+player.id).src = hearts_src;
             }
         }
