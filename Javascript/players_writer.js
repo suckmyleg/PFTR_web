@@ -11,11 +11,13 @@ function write_players(players)
 
     for(var i = 0; i < players.length; i++)
     {
+        var player = players[i];
+
         var player_div = document.getElementById(player.id);
 
-        if(players[i].id != "null" && player_div == null)
+        if(player.id != "null" && player_div == null)
         {
-            new_players += get_player_html(players[i], "../");
+            new_players += get_player_html(player, "../");
         }
         else
         {
