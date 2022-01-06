@@ -5,15 +5,15 @@ function get_player_html(player, working_directory)
 
 function write_players(players)
 {
-    var working_directory = "../";
+    const working_directory = "../";
 
-    var new_players = "";
+    let new_players = "";
 
     for(var i = 0; i < players.length; i++)
     {
-        var player = players[i];
+        let player = players[i];
 
-        var player_div = document.getElementById(player.id);
+        let player_div = document.getElementById(player.id);
         if (player.id != "null")
         {
             if(player_div == null)
@@ -22,7 +22,7 @@ function write_players(players)
             }
             else
             {
-                var hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
+                let hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
                 if (hearts_src != player_div.getElementsByClassName("hearts").src) {player_div.getElementsByClassName("hearts").src = hearts_src;}
                 console.log(player, player_div, hearts_src, player_div.getElementsByClassName("hearts").src);
             }
