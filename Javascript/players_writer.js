@@ -11,15 +11,15 @@ function get_player_html(player, working_directory)
         '<div class="player_container">'+
             	'<div class="player_display">'+
             		'<div class="player_status_container">'+
-            			'<a id="'+player.id+'_status">'+
-            				player.name+
-            			'</a>'+
-            		'</div>'+
-            		'<div class="player_status_container">'+
                         '<a class="player_status">'+
-                            getStatus(player)+
+            				player.name+
                         '</a>'+
                     '</div>'+
+            		'<div class="player_status_container">'+
+            			'<a id="'+player.id+'_status">'+
+                            getStatus(player)+
+            			'</a>'+
+            		'</div>'+
             		'<div>'+
             			'<img class="player_skin" src="https://crafatar.com/renders/body/'+player.id+'">'+
             		'</div>'+
