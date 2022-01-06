@@ -11,5 +11,5 @@ Pagina web para ver la partida en directo
 - - [Inscription](https://github.com/suckmyleg/PFTR_web/blob/main/inscription.php) - Log into the match [Unfinished]
 #
 - Other
-- - [Main](https://github.com/suckmyleg/PFTR_web/blob/main/main.html) - Main page [Unfinished]
+- - [Main](https://github.com/suckmyleg/PFTR_web/blob/main/index.html) - Main page [Unfinished]
 - - [Servers](https://github.com/suckmyleg/PFTR_web/blob/main/servers.php) - Servers of all servers [Finished]
