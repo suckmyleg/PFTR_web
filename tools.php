@@ -77,7 +77,7 @@ function host_new_match($name, $server_key, $players, $max_players)
     if ($permission)
     	{
             $sql = "INSERT INTO matches (server_name, winner, players, max_players, players_data)
-                   VALUES ('".$name."', '', '".$players."', '".$max_players."', '[]')";
+                   VALUES ('".$name."', '', '".$players."', '".base64_decode($max_players)."', '[]')";
 
             if ($conn->query($sql) === TRUE)
             {
