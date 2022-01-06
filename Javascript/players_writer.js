@@ -43,7 +43,7 @@ function write_players(players)
             }
             else
             {
-                let hearts_src = working_directory + "../Images/Hearts/"+parseInt(player.health)+".png";
+                let hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health)+".png";
                 let hearts_image = document.getElementById(player.id+"_hearts");
                 let player_kills = document.getElementById(player.id+"_kills");
                 let player_exp = document.getElementById(player.id+"_exp");
