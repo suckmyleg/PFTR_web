@@ -3,12 +3,14 @@
 .player_container{
 	background-color: black;
 	border: 2px solid orange;
-	border-radius:20px;
+    border-radius: 0px 20px 20px 0px;
 	display: inline-block;
 	width: 150px;
 	margin-right: 20px;
 	margin-bottom:20px;
-	transition:width 0s, background-color 1s;
+	visibility: hidden;
+	transition:width 0s, background-color 1s, border-radius 2s, visibility 4s;
+	visibility: visible;
 	padding:5px;
 }
 
@@ -41,7 +43,7 @@
     width: 300px;
     margin-right:0px;
     padding-right:0px;
-    border-radius:0px;
+    border-radius:0px 40px 20px 0px;
 }
 
 .player_estadistics{
