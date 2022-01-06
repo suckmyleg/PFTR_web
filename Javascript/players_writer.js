@@ -1,6 +1,6 @@
 function get_player_html(player, working_directory)
 {
-    return '<div id="'+player.id+'">'+
+    return '<div id="'+player.id+'" style="display:inline-block;">'+
         '<div class="player_container">'+
             	'<div class="player_display">'+
             		'<div class="player_title_container">'+
