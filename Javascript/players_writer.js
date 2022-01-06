@@ -21,7 +21,7 @@ function get_player_html(player, working_directory)
             		'<div style="height:200px;display:inline-block;"></div>'+
             	'</div>'+
             '</div>'
-        '</div>';
+        '</div></div>';
 }
 
 function write_players(players)
