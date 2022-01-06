@@ -3,13 +3,13 @@
 .player_container{
 	background-color: black;
 	border: 2px solid orange;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 20px;
 	display: inline-block;
 	width: 150px;
 	margin-right: 20px;
 	margin-bottom:20px;
 	visibility: hidden;
-	transition:width 0s, background-color 1s, border-radius 2s, visibility 4s;
+	transition:width 0s, background-color 1s, border-radius 5s, visibility 4s;
 	visibility: visible;
 	padding:5px;
 }
@@ -22,7 +22,7 @@
 	font-size: 30px;
 	font-family:Minecraft;
 	color: white;
-	transition: color 1s;
+	transition: color 0.01s;
 }
 
 .player_title_container{
@@ -43,7 +43,6 @@
     width: 300px;
     #margin-right:0px;
     #padding-right:0px;
-    border-radius:0px 40px 20px 0px;
 }
 
 .player_estadistics{
