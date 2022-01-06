@@ -55,7 +55,7 @@ function write_players(players)
                 if (player_playing.innerHTML != player.time_playing) {player_playing.innerHTML = player.time_playing;}
                 if (player_hp.innerHTML != parseInt(player.health*100)/100)
                 {
-                    player_hp.innerHTML = player.health;
+                    player_hp.innerHTML = parseInt(player.health*100)/100);
                     hearts_image.src = hearts_src;
                 }
             }
