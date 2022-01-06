@@ -24,7 +24,8 @@ function write_players(players)
             }
             else
             {
-                player_div.getElementsByClassName("hearts").src = working_directory + "Images/Hearts/"+parseInt(player.health);
+                var hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
+                if (hearts_src != player_div.getElementsByClassName("hearts").src) player_div.getElementsByClassName("hearts").src = hearts_src;
             }
         }
     }
@@ -41,7 +42,6 @@ async function auto_reload(match_id, delay)
 {
     while (true)
     {
-
         reload(match_id, write_players);
         await sleep(delay*1000);
     }
