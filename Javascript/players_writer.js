@@ -73,7 +73,6 @@ function write_players(players)
                     player_hp.innerHTML = parseInt(player.health*100)/100;
                     hearts_image.src = hearts_src;
                 }
-                .filter = "grayscale(100%)";
             }
         }
     }
