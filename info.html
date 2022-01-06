@@ -20,7 +20,17 @@
 	</div>
 
 	<script>
-	create_search_bar("nav", "search_bar", "search", "Screens/players.php?m=");
+	function show_players()
+	{
+		create_search_bar("nav", "search_bar", "search", "Screens/players.php?m=");
+	}
+
+	function show_servers()
+	{
+		create_search_bar("nav", "search_bar", "search", "Screens/servers.php?s=");
+	}
+
+	show_players();
 	</script>
 
 </body>
