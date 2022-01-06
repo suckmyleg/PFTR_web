@@ -22,6 +22,7 @@ function write_players(players)
             }
             else
             {
+                console.log(player, player_div);
                 var hearts_src = working_directory + "Images/Hearts/"+parseInt(player.health);
                 if (hearts_src != player_div.getElementsByClassName("hearts").src) {player_div.getElementsByClassName("hearts").src = hearts_src;}
             }
