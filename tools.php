@@ -51,13 +51,13 @@ function getserver_keyFromServer($name)
        }
 }
 
-function save_to_database($name, $server_key, $match_id, $content)
+function save_to_database($name, $server_key, $match_id, $data)
 {
     global $conn;
     global $permission;
 	if ($permission)
 	{
-        $sql = "UPDATE matches SET players_data='".$content."' WHERE id='" . $match_id . "'";
+        $sql = "UPDATE matches SET players_data='".$data."' WHERE id='" . $match_id . "'";
         if ($conn->query($sql) === TRUE) {
             return "OK";
         } else {

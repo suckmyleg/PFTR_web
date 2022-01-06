@@ -11,7 +11,7 @@ catch (Exception  $e) {$name = FALSE;}
 try {$command = $_GET["command"];}
 catch (Exception  $e) {$command = FALSE;}
 
-try {$data = base64_decode($_GET["data"]);}
+try {$data = $_GET["data"];}
 catch (Exception  $e) {$data = FALSE;}
 
 try {$server_key = $_GET["server_key"];}
@@ -30,7 +30,7 @@ if($command == "create_password")
 
 if($command == "host_new_match")
 {
-	$output = host_new_match($name, $server_key, "", base64_decode($data);
+	$output = host_new_match($name, $server_key, "", base64_encode($data);
 }
 
 if($command == "reload")
