@@ -10,8 +10,8 @@ function get_player_html(player, working_directory)
     return '<div id="'+player.id+'" style="display:inline-block;">'+
         '<div class="player_container">'+
             	'<div class="player_display">'+
-            		'<div class="player_status_container">'+
-                        '<a class="player_status">'+
+            		'<div class="player_name_container">'+
+                        '<a class="player_name">'+
             				player.name+
                         '</a>'+
                     '</div>'+
