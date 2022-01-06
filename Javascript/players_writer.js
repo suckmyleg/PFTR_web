@@ -53,7 +53,7 @@ function write_players(players)
                 if (player_kills.innerHTML != player.number_kills) {player_kills.innerHTML = player.number_kills;}
                 if (player_exp.innerHTML != player.exp_level) {player_exp.innerHTML = player.exp_level;}
                 if (player_playing.innerHTML != player.time_playing) {player_playing.innerHTML = player.time_playing;}
-                if (player_hp.innerHTML != player.health)
+                if (player_hp.innerHTML != parseInt(player.health*100)/100)
                 {
                     player_hp.innerHTML = player.health;
                     hearts_image.src = hearts_src;
