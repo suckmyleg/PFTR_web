@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="Styles/players_styles.css">
 	<link rel="stylesheet" type="text/css" href="Styles/player_styles.css">
+	<link rel="stylesheet" type="text/css" href="Styles/general.css">
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
 </head>
 <body>

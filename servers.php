@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
 	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
+	<link rel="stylesheet" type="text/css" href="Styles/general.css">
 </head>
 <body>
 	<div id="bar_container">
