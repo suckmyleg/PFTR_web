@@ -116,10 +116,48 @@ function get_match_players_data($match_id)
 
 }
 
+function get_server_data_id($name)
+{
+    global $conn;
+    $sql = "SELECT server_data FROM servers WHERE server_name='".$name."'";
+    $result = $conn->query($sql);
+
+    if (!empty($result) && $result->num_rows > 0)
+    {
+        while($row = $result->fetch_assoc())
+        {
+            return $row;
+        }
+    }
+    else
+    {
+        die("Error listing servers");
+    }
+}
+
+function get_server_data_custom_name($data)
+{
+    global $conn;
+    $sql = "SELECT server_data FROM servers WHERE server_custom_name='".base64_decode($data)."'";
+    $result = $conn->query($sql);
+
+    if (!empty($result) && $result->num_rows > 0)
+    {
+        while($row = $result->fetch_assoc())
+        {
+            return $row;
+        }
+    }
+    else
+    {
+        die("Error listing servers");
+    }
+}
+
 function get_servers_data()
 {
     global $conn;
-    $sql = "SELECT server_name FROM servers";
+    $sql = "SELECT server_data FROM servers";
     $result = $conn->query($sql);
 
     $results = array();
@@ -136,6 +174,29 @@ function get_servers_data()
     {
         die("Error listing servers");
     }
+}
+
+function set_server_custom_name($name, $data)
+{
+    global $conn;
+    global $permission;
+    if ($permission)
+    {
+        $sql = "UPDATE servers SET server_custom_name='".base64_decode($data)."' WHERE id='".$match_id."'";
+        $result = $conn->query($sql);
+
+        if ($conn->query($sql) === TRUE) {
+            return "OK";
+        } else {
+          die("Error updating: " . $conn->error);
+        }
+    }
+    else
+    {
+        die("Permission denied");
+    }
+
+
 }
 
 function get_players_from_match($name, $server_key, $match_id)

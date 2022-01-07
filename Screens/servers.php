@@ -12,7 +12,7 @@
 
             include "../tools.php";
 
-            echo json_encode(get_servers_data());
+            echo json_encode(get_server_data_id($_GET["s"]));
 
             ?>, "../");
 

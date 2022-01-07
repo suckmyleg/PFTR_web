@@ -5,6 +5,44 @@ include "tools.php";
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 
+function react($name, $command, $data, $server_key, $match_id)
+{
+    if($command == "create_password")
+    {
+        return create_password($name, $server_key);
+    }
+    if($command == "host_new_match")
+    {
+        return host_new_match($name, $server_key, "", $data);
+    }
+    if($command == "reload")
+    {
+        return save_to_database($name, $server_key, $match_id, $data);
+    }
+    if($command == "create_new_server")
+    {
+        return create_new_server();
+    }
+    if($command == "match_players_data")
+    {
+        return get_match_players_data($match_id);
+    }
+    if($command == "get_server_data_id")
+    {
+        return get_server_data_custom_name($name);
+    }
+    if($command == "get_server_data_custom_name")
+    {
+        return get_server_data_custom_id($name);
+    }
+    if($command == "set_server_custom_name")
+    {
+        return set_server_custom_name($name, $data);
+    }
+    return "Uknown command";
+}
+
+
 try {$name = $_GET["server"];}
 catch (Exception  $e) {$name = FALSE;}
 
@@ -22,33 +60,8 @@ catch (Exception  $e) {$match_id = FALSE;}
 
 $permission = verifyserver_keyFromServer($name, $server_key);
 
-$output = "error";
-if($command == "create_password")
-{
-	$output = create_password($name, $server_key);
-}
-
-if($command == "host_new_match")
-{
-	$output = host_new_match($name, $server_key, "", $data);
-}
-
-if($command == "reload")
-{
-	$output = save_to_database($name, $server_key, $match_id, $data);
-}
-
-if($command == "create_new_server")
-{
-	$output = create_new_server();
-}
-if($command == "match_players_data")
-{
-    $output = get_match_players_data($match_id);
-}
-
 $conn->close();
 
-echo $output;
+echo react($name, $command, $data, $server_key, $match_id);
 
 ?>
