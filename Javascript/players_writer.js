@@ -12,6 +12,14 @@ function getStatusColor(player)
     return "grey";
 }
 
+function getFilter(status)
+{
+    var filter = "grayscale(0%)";
+    if (status == "Offline") filter = "grayscale(100%)";
+    if (status == "Dead") filter = "grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8)";
+    return filter
+}
+
 function get_player_html(player, working_directory)
 {
     return '<div id="'+player.id+'" style="display:inline-block;">'+
@@ -28,7 +36,7 @@ function get_player_html(player, working_directory)
             			'</a>'+
             		'</div>'+
             		'<div>'+
-            			'<img class="player_skin" id="'+player.id+'_skin" src="https://crafatar.com/renders/body/'+player.id+'">'+
+            			'<img class="player_skin" id="'+player.id+'_skin" style="filter: '+getFilter(getStatus(player))+';" src="https://crafatar.com/renders/body/'+player.id+'">'+
             		'</div>'+
             		'<img class="hearts" id="'+player.id+'_hearts" src="'+working_directory+'Images/Hearts/'+parseInt(player.health)+'.png">'+
             	'</div>'+
@@ -80,8 +88,7 @@ function write_players(players)
                 {
                     player_status.innerHTML = status;
                     player_status.style.color = getStatusColor(player);
-                    if (status == "Offline") document.getElementById(player.id+"_skin").style.filter = "grayscale(100%)";
-                    else document.getElementById(player.id+"_skin").style.filter = "grayscale(0%)";
+                    document.getElementById(player.id+"_skin").style.filter = getFilter(status);
                 }
                 if (player_hp.innerHTML != parseInt(player.health*100)/100)
                 {
