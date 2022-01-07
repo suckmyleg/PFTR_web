@@ -28,7 +28,7 @@ function get_player_html(player, working_directory)
             			'</a>'+
             		'</div>'+
             		'<div>'+
-            			'<img class="player_skin" src="https://crafatar.com/renders/body/'+player.id+'">'+
+            			'<img class="player_skin" id="'+player.id+'_skin" src="https://crafatar.com/renders/body/'+player.id+'">'+
             		'</div>'+
             		'<img class="hearts" id="'+player.id+'_hearts" src="'+working_directory+'Images/Hearts/'+parseInt(player.health)+'.png">'+
             	'</div>'+
@@ -80,6 +80,8 @@ function write_players(players)
                 {
                     player_status.innerHTML = status;
                     player_status.style.color = getStatusColor(player);
+                    if (status == "Offline") document.getElementById(player.id+"_skin").style.filter = "grayscale(100%)";
+                    else document.getElementById(player.id+"_skin").style.filter = "grayscale(0%)";
                 }
                 if (player_hp.innerHTML != parseInt(player.health*100)/100)
                 {
