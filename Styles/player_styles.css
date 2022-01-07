@@ -55,7 +55,9 @@
 
 .player_container:hover .player_name {
     color:black;
+    padding-left:60%;
 }
+
 
 .player_container:hover .player_estadistics {
     visibility: visible;

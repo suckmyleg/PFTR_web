@@ -38,7 +38,7 @@ function get_player_html(player, working_directory)
             		'<p>Exp: <a id="'+player.id+'_exp">'+player.exp_level+'</a></p>'+
             		'<p>Hp: <a id="'+player.id+'_hp">'+parseInt(player.health*100)/100+'</a></p>'+
             		'<p>Time: <a id="'+player.id+'_playing">'+parseInt(player.time_playing/100)+'</a>s</p>'+
-            		'<div style="height:200px;display:inline-block;"></div>'+
+            		'<div style="height:190px;display:inline-block;"></div>'+
             	'</div>'+
             '</div>'+
         '</div>';
