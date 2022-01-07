@@ -16,6 +16,7 @@
 
 .player_display{
 	display: inline-block;
+	width: 150px;
 }
 
 .player_name{
@@ -40,7 +41,7 @@
 
 .player_container:hover{
     background-color:orange;
-    width: 280px;
+    width: 307px;
     #margin-right:0px;
     #padding-right:0px;
 }
@@ -51,6 +52,9 @@
     visibility: hidden;
     font-family:Minecraft;
     transition: visibility 2s;
+    #border:1px solid black;
+    #border-radius:20px;
+    width: 150px;
 }
 
 .player_container:hover .player_name {
