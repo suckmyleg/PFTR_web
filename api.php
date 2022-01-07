@@ -39,6 +39,21 @@ function react($name, $command, $data, $server_key, $match_id)
     {
         return set_server_custom_name($name, $data);
     }
+    if($command == "get_delay_request")
+    {
+        return get_delay_request($name, $match_id);
+    }
+
+
+    if($command == "set_server_custom_name")
+    {
+        return set_server_custom_name($name, $data);
+    }
+    if($command == "set_server_custom_name")
+    {
+        return set_server_custom_name($name, $data);
+    }
+
     return "Uknown command";
 }
 

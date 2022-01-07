@@ -13,7 +13,7 @@ $conn = new mysqli($servername, $username, $password, $db);
 $permission = FALSE;
 
 if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+  die("500");
 }
 
 function generateRandomString($length = 10) {
@@ -57,16 +57,16 @@ function save_to_database($name, $server_key, $match_id, $data)
     global $permission;
 	if ($permission)
 	{
-        $sql = "UPDATE matches SET players_data='".$data."' WHERE id='" . $match_id . "'";
+        $sql = "UPDATE matches SET players_data='".$data."', last_reload='".date("Y:m:d H:i:s")."' WHERE id='" .$match_id ."'";
         if ($conn->query($sql) === TRUE) {
-            return "OK";
+            return "200";
         } else {
-          die("Error updating: " . $conn->error);
+          die("500");
         }
 	}
 	else
 	{
-		die("Permission denied");
+		die("403");
 	}
 }
 
@@ -85,12 +85,12 @@ function host_new_match($name, $server_key, $players, $max_players)
             }
             else
             {
-                die("Error: " . $sql . "<br>" . $conn->error);
+                die("500");
             }
     	}
     	else
     	{
-    		die("Permission denied");
+    		die("403");
     	}
 }
 
@@ -111,7 +111,7 @@ function get_match_players_data($match_id)
     }
     else
     {
-        die("Error match doesnt exist");
+        die("404");
     }
 
 }
@@ -133,6 +133,11 @@ function get_server_data_id($name)
     {
         die("Error listing servers");
     }
+}
+
+function get_delay_request($name, $match_id)
+{
+    return "1";
 }
 
 function get_server_data_custom_name($data)
@@ -186,14 +191,14 @@ function set_server_custom_name($name, $data)
         $result = $conn->query($sql);
 
         if ($conn->query($sql) === TRUE) {
-            return "OK";
+            return "200";
         } else {
           die("Error updating: " . $conn->error);
         }
     }
     else
     {
-        die("Permission denied");
+        die("403");
     }
 
 
@@ -225,7 +230,7 @@ function get_players_from_match($name, $server_key, $match_id)
         }
         else
         {
-        	die("Permission denied");
+        	die("403");
         }
 
 }
@@ -238,14 +243,14 @@ function add_player_to_match($name, $match_id, $player)
     	{
             $sql = "UPDATE matches SET players='".get_players_from_match($name, $server_key, $match_id).$content."' WHERE server_name='" . $name . "'";
             if ($conn->query($sql) === TRUE) {
-                return "OK";
+                return "200";
             } else {
               die("Error updating: " . $conn->error);
             }
     	}
     	else
     	{
-    		die("Permission denied");
+    		die("403");
     	}
 }
 
@@ -296,7 +301,7 @@ function create_password($name, $server_key)
         }
         else
         {
-            die("Permission denied");
+            die("403");
         }
     }
 }
