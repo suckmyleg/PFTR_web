@@ -60,8 +60,7 @@ catch (Exception  $e) {$match_id = FALSE;}
 
 $permission = verifyserver_keyFromServer($name, $server_key);
 
-$conn->close();
-
 echo react($name, $command, $data, $server_key, $match_id);
 
+$conn->close();
 ?>
