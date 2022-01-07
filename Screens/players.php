@@ -14,7 +14,7 @@
     <script>
         auto_reload(<?php
             echo $_GET["m"];
-            ?>, 1);
+            ?>, 0.001);
     </script>
 </body>
 </html>
