@@ -23,9 +23,9 @@ function react($name, $command, $data, $server_key, $match_id)
     {
         return create_new_server();
     }
-    if($command == "match_players_data")
+    if($command == "match_data")
     {
-        return get_match_players_data($match_id);
+        return get_match_data($match_id);
     }
     if($command == "get_server_data_id")
     {

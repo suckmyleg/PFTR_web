@@ -13,7 +13,7 @@ $conn = new mysqli($servername, $username, $password, $db);
 $permission = FALSE;
 
 if (!$conn) {
-  die("500");
+  die("501");
 }
 
 function generateRandomString($length = 10) {
@@ -36,19 +36,19 @@ function verifyserver_keyFromServer($name, $server_key)
 function getserver_keyFromServer($name)
 {
     global $conn;
-       $sql = "SELECT server_key FROM servers WHERE server_name='" . $name . "'";
-       $result = $conn->query($sql);
+    $sql = "SELECT server_key FROM servers WHERE server_name='" . $name . "'";
+   $result = $conn->query($sql);
 
-       if ($result->num_rows > 0) {
-         // output data of each row
-         while($row = $result->fetch_assoc()) {
-            $server_key = $row["server_key"];
-           if($server_key == ""){return FALSE;}
-           return $server_key;
-         }
-       } else {
-         return FALSE ;
-       }
+   if ($result->num_rows > 0) {
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+        $server_key = $row["server_key"];
+       if($server_key == ""){return FALSE;}
+       return $server_key;
+     }
+   } else {
+     return FALSE ;
+   }
 }
 
 function save_to_database($name, $server_key, $match_id, $data)
@@ -94,7 +94,7 @@ function host_new_match($name, $server_key, $players, $max_players)
     	}
 }
 
-function get_match_players_data($match_id)
+function get_match_data($match_id)
 {
     global $conn;
 
@@ -131,13 +131,13 @@ function get_server_data_id($name)
     }
     else
     {
-        die("Error listing servers");
+        die("500");
     }
 }
 
 function get_delay_request($name, $match_id)
 {
-    return "500";
+    return "200";
 }
 
 function get_server_data_custom_name($data)
@@ -155,7 +155,7 @@ function get_server_data_custom_name($data)
     }
     else
     {
-        die("Error listing servers");
+        die("500");
     }
 }
 
@@ -177,7 +177,7 @@ function get_servers_data()
     }
     else
     {
-        die("Error listing servers");
+        die("500");
     }
 }
 
@@ -193,7 +193,7 @@ function set_server_custom_name($name, $data)
         if ($conn->query($sql) === TRUE) {
             return "200";
         } else {
-          die("Error updating: " . $conn->error);
+          die("500");
         }
     }
     else
@@ -245,7 +245,7 @@ function add_player_to_match($name, $match_id, $player)
             if ($conn->query($sql) === TRUE) {
                 return "200";
             } else {
-              die("Error updating: " . $conn->error);
+              die("500");
             }
     	}
     	else
@@ -267,7 +267,7 @@ function create_new_server()
     }
     else
     {
-        die("Error: " . $sql . "<br>" . $conn->error);
+        die("500");
     }
     return $name;
 }
@@ -283,7 +283,7 @@ function create_password($name, $server_key)
         if ($conn->query($sql) === TRUE) {
             return $new_server_key;
         } else {
-        die("Error updating: " . $conn->error);
+        die("500");
         }
         return $new_server_key;
     }
@@ -295,7 +295,7 @@ function create_password($name, $server_key)
                     if ($conn->query($sql) === TRUE) {
                         return $new_server_key;
                     } else {
-                    die("Error updating: " . $conn->error);
+                    die("500");
                     }
             return $new_server_key;
         }

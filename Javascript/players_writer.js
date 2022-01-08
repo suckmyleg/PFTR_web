@@ -112,11 +112,16 @@ function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function setup_data(data)
+{
+    write_players(data.players);
+}
+
 async function auto_reload(match_id, delay)
 {
     while (true)
     {
-        reload(match_id, write_players);
+        reload(match_id, setup_data);
         await sleep(delay*1000);
     }
 }

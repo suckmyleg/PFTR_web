@@ -20,16 +20,16 @@ Pagina web para ver la partida en directo
 
 ### Commands
 |command_name|returns|name|server_key|match_id|data|
-|---|----|--------|--------|--------|-------------|
+|-------|----|--------|--------|--------|---|
 |reload|200|X|X|X|X|
-|create_password|server_key|X|X|||
+|create_password|server_key|X|X| | |
 |host_new_match|match_id|X|X||X|
-|create_new_server|name|||||
-|match_players_data|players_data|||X||
-|get_server_data_id|server_data|X||||
-|get_server_data_custom_name|server_data||||X|
-|set_server_custom_name|200|X|||X|
-|get_delay_request|delay|||X||
+|create_new_server|name| | | | |
+|match_data|players_data| | |X| |
+|get_server_data_id|server_data|X| | | |
+|get_server_data_custom_name|server_data| | | |X|
+|set_server_custom_name|200|X| | |X|
+|get_delay_request|delay| | |X| |
 
 
 ### Args
@@ -41,5 +41,14 @@ Pagina web para ver la partida en directo
 |match_id|string|FALSE|
 |data|base64|FALSE|
 
+### Codes
+
+|Code|Meaning|
+|-----|-------|
+|200|Successful|
+|404|Content not found|
+|403|No permission|
+|500|Server internal error|
+|501|Not connection to the database|
 
 
