@@ -137,7 +137,7 @@ function get_server_data_id($name)
 
 function get_delay_request($name, $match_id)
 {
-    return "1";
+    return "500";
 }
 
 function get_server_data_custom_name($data)
