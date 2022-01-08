@@ -14,3 +14,42 @@ Pagina web para ver la partida en directo
 - Other
 - - [Main](https://github.com/suckmyleg/PFTR_web/blob/main/index.html) - Main page [Unfinished]
 - - [Servers](https://github.com/suckmyleg/PFTR_web/blob/main/servers.php) - All servers [Unfinished]
+
+# API
+[Api](https://github.com/suckmyleg/PFTR_web/blob/main/api.php) - Make request to sql
+
+### Commands
+- reload(name, server_key, match_id, data)
+- create_password(name, server_key)
+- host_new_match(name, server_key, """, data)
+- create_new_server()
+- match_players_data(match_id)
+- get_server_data_id(name)
+- get_server_data_custom_name(data)
+- set_server_custom_name(name, data)
+- get_delay_request(name, match_id)
+
+|command_name|returns|name|server_key|match_id|data|
+|---|----|--------|--------|--------|-------------|
+|reload|200|X|X|X|X|
+|create_password|server_key|X|X|||
+|host_new_match|match_id|X|X||X|
+|create_new_server|name|||||
+|match_players_data|players_data||X|||
+|get_server_data_id|server_data|X||||
+|get_server_data_custom_name|server_data||||X|
+|set_server_custom_name|200|X|||X|
+|get_delay_request|delay|X||X||
+
+
+### Args
+
+|Arg|Type|Default|
+|---|----|--------|
+|name|string|FALSE|
+|server_key|string|FALSE|
+|match_id|string|FALSE|
+|data|base64|FALSE|
+
+
+

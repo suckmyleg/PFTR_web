@@ -7,6 +7,10 @@ include "tools.php";
 
 function react($name, $command, $data, $server_key, $match_id)
 {
+    if($command == "reload")
+    {
+        return save_to_database($name, $server_key, $match_id, $data);
+    }
     if($command == "create_password")
     {
         return create_password($name, $server_key);
@@ -14,10 +18,6 @@ function react($name, $command, $data, $server_key, $match_id)
     if($command == "host_new_match")
     {
         return host_new_match($name, $server_key, "", $data);
-    }
-    if($command == "reload")
-    {
-        return save_to_database($name, $server_key, $match_id, $data);
     }
     if($command == "create_new_server")
     {
@@ -33,7 +33,7 @@ function react($name, $command, $data, $server_key, $match_id)
     }
     if($command == "get_server_data_custom_name")
     {
-        return get_server_data_custom_id($name);
+        return get_server_data_custom_id($data);
     }
     if($command == "set_server_custom_name")
     {
