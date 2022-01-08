@@ -41,7 +41,7 @@ function react($name, $command, $data, $server_key, $match_id)
     }
     if($command == "get_delay_request")
     {
-        return get_delay_request($name, $match_id);
+        return get_delay_request($match_id);
     }
 
 
