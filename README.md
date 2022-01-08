@@ -29,7 +29,7 @@ Pagina web para ver la partida en directo
 |get_server_data_id|server_data|X||||
 |get_server_data_custom_name|server_data||||X|
 |set_server_custom_name|200|X|||X|
-|get_delay_request|delay|X||X||
+|get_delay_request|delay|||X||
 
 
 ### Args
