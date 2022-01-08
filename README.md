@@ -25,11 +25,11 @@ Pagina web para ver la partida en directo
 |create_password|server_key|X|X|||
 |host_new_match|match_id|X|X||X|
 |create_new_server|name|||||
-|match_players_data|players_data||X|||
+|match_players_data|players_data|||X||
 |get_server_data_id|server_data|X||||
 |get_server_data_custom_name|server_data||||X|
 |set_server_custom_name|200|X|||X|
-|get_delay_request|delay|X||X||
+|get_delay_request|delay|||X||
 
 
 ### Args
