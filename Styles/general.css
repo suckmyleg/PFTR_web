@@ -1,5 +1,6 @@
 @font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
 
 body{
-    background-color: black;
+    background-color: white;
+    margin:0px;
 }

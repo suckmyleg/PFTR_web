@@ -29,25 +29,103 @@
 	padding-bottom:5px;
 }
 
-#bar_nav{
-background-color:black;
-padding:10px;
-padding-bottom:10px;
-margin-top:1px;
-visibility:hidden;
-}
-
 #bar_container:hover #bar_nav{
-visibility:visible;
+    visibility:visible;
 }
 
-#bar_nav a{
-    font-size:20px;
-	color:white;
-	margin-bottom:0px 1% 0px 0px;
-	padding:10px 7% 10px 7%;
-	text-decoration: none;
+#bar_nav_horizontal{
+    position: sticky;
 }
-#bar_nav a:hover{
-    background-color:blue;
+
+#bar_nav_vertical{
+    position: absolute;
+    height:100%;
+    background-color:grey;
+    right:0;
+    visibility: hidden;
+    font-size:30px;
+    width: 250px;
 }
+
+#bar_nav_button_displayer{
+    position: absolute;
+    text-decoration:none;
+    background-color:rgb(0,0,0,0);
+    top:0;
+    right:0;
+    padding:10px;
+    border: none;
+    /*border:2px solid grey;
+    border-radius:10px;*/
+}
+
+
+
+/*
+
+VERTICAL
+*/
+
+#bar_nav_vertical ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+#bar_nav_vertical a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: Minecraft;
+}
+
+#bar_nav_vertical a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#bar_nav_vertical a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+
+
+
+
+/*
+
+HORIZONTAL
+*/
+#bar_nav_horizontal ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#bar_nav_horizontal li {
+  float: left;
+}
+
+#bar_nav_horizontal a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#bar_nav_horizontal a:hover:not(.active) {
+  background-color: #111;
+}
+
+#bar_nav_horizontal .active {
+  background-color: #04AA6D;
+}
+
+
