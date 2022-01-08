@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="Javascript/frame.js"></script>
 	<script type="text/javascript" src="Javascript/bar.js"></script>
 </head>
-<body onload="auto_reload_frame('players_frame', 30);">
+<body>
 	<div id="bar_container">
     		<div id="bar">
     			<div id="bar_name">

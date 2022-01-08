@@ -19,16 +19,6 @@ Pagina web para ver la partida en directo
 [Api](https://github.com/suckmyleg/PFTR_web/blob/main/api.php) - Make request to sql
 
 ### Commands
-- reload(name, server_key, match_id, data)
-- create_password(name, server_key)
-- host_new_match(name, server_key, """, data)
-- create_new_server()
-- match_players_data(match_id)
-- get_server_data_id(name)
-- get_server_data_custom_name(data)
-- set_server_custom_name(name, data)
-- get_delay_request(name, match_id)
-
 |command_name|returns|name|server_key|match_id|data|
 |---|----|--------|--------|--------|-------------|
 |reload|200|X|X|X|X|
