@@ -54,7 +54,7 @@
 }
 
 #bar_nav_button_displayer{
-    position: sticky;
+    position: absolute;
     text-decoration:none;
     background-color:rgb(0,0,0,0);
     top:0;
