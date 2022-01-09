@@ -30,7 +30,7 @@
 }
 
 #bar_container{
-display: sticky;}
+position: sticky;}
 
 #bar_container:hover #bar_nav{
     visibility:visible;
