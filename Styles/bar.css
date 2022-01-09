@@ -38,6 +38,7 @@ position: sticky;}
 
 #bar_nav_horizontal{
     position: sticky;
+    top:0;
 }
 
 #bar_nav_vertical{
