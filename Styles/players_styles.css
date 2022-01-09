@@ -1,10 +1,14 @@
 @font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
 
 #search_bar{
-    padding-right:95vv;
+    padding-right:95%;
     background-color:black;
     color:white;
     border:none;
+}
+
+body{
+background-color:black;
 }
 
 #search{
