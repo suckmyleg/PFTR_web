@@ -7,6 +7,16 @@ h1{
 	margin: 0px;
 }
 
+#search_bar{
+    padding-right:100vh;
+    background-color:black;
+    color:white;
+    border:none;
+}
 
-
-
+#search{
+    border:2px solid white;
+    border-radius: 10px;
+    background-color:grey;
+    color:black;
+}

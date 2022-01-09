@@ -119,8 +119,8 @@ function write_server_data(server_data)
 
 function write_match_data(match_data)
 {
-    if(match_data.pvp == "true") document.getElementById("pvp_display").style.visibility = "visible";
-    else  document.getElementById("pvp_display").style.visibility = "hidden";
+    if(match_data.pvp == "true") document.getElementById("pvp_display").style.display = "block";
+    else  document.getElementById("pvp_display").style.display = "none";
 }
 
 function setup_data(data)
