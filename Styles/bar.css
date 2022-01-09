@@ -18,6 +18,8 @@
 
 #bar_nav_button_displayer_image{
     width:30px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 #bar_name{

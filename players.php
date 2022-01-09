@@ -17,7 +17,7 @@
     				<img class="bar_icons" id="icon2" src="Images/Icono/aju.png">
     			</div>
     		</div>
-    		<button onclick="swtich_bar_visibility();" id="bar_nav_button_displayer"><img src="Images/Nav_Icons/more.png"></button>
+    		<button onclick="swtich_bar_visibility();" id="bar_nav_button_displayer"><img id="bar_nav_button_displayer_image" src="Images/Nav_Icons/more.png"></button>
     	</div>
     	<div id="bar_nav_vertical">
     		<ul>
