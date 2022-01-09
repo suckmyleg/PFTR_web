@@ -1,12 +1,5 @@
 @font-face { font-family: Minecraft; src: url('../Fonts/minecraft.ttf'); }
 
-body{
-	margin: 0px;
-}
-h1{
-	margin: 0px;
-}
-
 #search_bar{
     padding-right:100vh;
     background-color:black;
