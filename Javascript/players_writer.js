@@ -112,9 +112,22 @@ function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function write_server_data(server_data)
+{
+
+}
+
+function write_match_data(match_data)
+{
+    if(match_data.pvp == "true") document.getElementById("pvp_display").style.visibility = "visible";
+    else  document.getElementById("pvp_display").style.visibility = "hidden";
+}
+
 function setup_data(data)
 {
     write_players(data.players);
+    write_match_data(data.match_data);
+    write_server_data(data.server_data);
 }
 
 async function auto_reload(match_id, delay)

@@ -9,7 +9,10 @@
 	<script type="text/javascript" src="../Javascript/requests.js"></script>
 </head>
 <body>
-	<div id="screen"></div>
+    <div id="pvp_display">//// PVP MODE ON ////</div>
+	<div id="screen">
+
+	</div>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1055279756736871" crossorigin="anonymous"></script>
     <script>
         auto_reload(<?php
