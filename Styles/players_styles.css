@@ -4,16 +4,16 @@
     padding-right:80%;
     background-color:black;
     color:white;
-    border:none;
+    border:1px solid rgb(0, 0, 50, 0.8);
 }
 
 body{
-background-color:black;
+    background-color:black;
 }
 
 #search{
-    border:2px solid white;
-    border-radius: 10px;
+    border:1px solid white;
+    border-radius: 1px;
     background-color:grey;
     color:black;
 }
