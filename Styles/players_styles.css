@@ -2,7 +2,7 @@
 
 #search_bar{
     padding-right:80%;
-    background-color:none;
+    background-color: rgb(0,0,0,0);
     color:white;
     border:none;
     border-bottom:2px solid grey;
