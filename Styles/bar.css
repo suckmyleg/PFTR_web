@@ -29,6 +29,9 @@
 	padding-bottom:5px;
 }
 
+#bar_container{
+display: sticky;}
+
 #bar_container:hover #bar_nav{
     visibility:visible;
 }
