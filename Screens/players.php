@@ -10,6 +10,7 @@
 </head>
 <body>
     <div id="pvp_display">//// PVP MODE ON ////</div>
+    <div id="announcements"></div>
 	<div id="screen">
 
 	</div>
