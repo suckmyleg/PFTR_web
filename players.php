@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Match players</title>
 	<link rel="stylesheet" type="text/css" href="Styles/bar.css">
 	<link rel="stylesheet" type="text/css" href="Styles/frame.css">
 	<link rel="stylesheet" type="text/css" href="Styles/general.css">
